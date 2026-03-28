@@ -1,0 +1,22 @@
+# Build artifacts
+*.exe
+*.o
+*.obj
+*.out
+
+# Logs / run outputs
+run_output*.txt
+run_full*.txt
+
+# IDE/Editor state
+.vscode/
+.qodo/
+
+# OS / misc
+*.log
+*.tmp
+*.temp
+~$*
+
+# Binary docs
+*.xlsx

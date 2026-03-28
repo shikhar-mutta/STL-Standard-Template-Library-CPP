@@ -18,5 +18,3 @@ run_full*.txt
 *.temp
 ~$*
 
-# Binary docs
-*.xlsx

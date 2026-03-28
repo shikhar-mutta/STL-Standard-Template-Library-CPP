@@ -61,6 +61,8 @@ A single PowerShell script handles **compile + run + cleanup** for any file.
 > 2. Runs the binary
 > 3. Deletes the `.exe` — keeps the repo source-only
 
+> 💡 **The PowerShell script `run.ps1` handles all semicolon chaining automatically!**
+
 ---
 
 ## 🛠️ Requirements
@@ -286,20 +288,22 @@ Programming Practice/
 
 ---
 
-## 🔧 Manual Compilation
+## 🔧 Manual Compilation (PowerShell)
 
-If you prefer to compile manually without the script:
+### ⚠️ IMPORTANT: PowerShell vs Bash Syntax
 
-```bash
-g++ -std=c++20 -O2 -Wall -o output array.cpp && ./output
-```
+**PowerShell uses `;` to chain commands, NOT `&&`**
 
-Or with the full path:
+| Shell | Syntax | Your Shell |
+|-------|--------|-----------|
+| PowerShell (Windows) | `command1; command2` | ✅ Use this |
+| Bash / Git Bash | `command1 && command2` | ❌ Don't use in PowerShell |
+| CMD | `command1 & command2` | ❌ Don't use in PowerShell |
+
+### Brief way to compile & run
 ```powershell
-C:\msys64\mingw64\bin\g++ -std=c++20 -O2 -Wall -o array.exe array.cpp
-.\array.exe
+g++ -std=c++20 -O2 -Wall -o output.exe array.cpp; .\output.exe
 ```
-
 ---
 
 ## 📝 C++20 Features Used

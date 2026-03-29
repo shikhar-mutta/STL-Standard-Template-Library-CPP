@@ -304,6 +304,70 @@ Programming Practice/
 ```powershell
 g++ -std=c++20 -O2 -Wall -o output.exe array.cpp; .\output.exe
 ```
+
+---
+
+## 🐧 Linux / Bash Compilation
+
+> Use `&&` instead of `;` in Bash to chain commands
+
+### Compile & Run Single File
+```bash
+g++ -std=c++20 -Wall -Wextra -Werror -O2 vector.cpp -o output && ./output
+```
+
+### Compile & Run Any File (replace filename)
+```bash
+g++ -std=c++20 -Wall -Wextra -Werror -O2 array.cpp -o output && ./output
+```
+
+### Compile & Run All Files One By One
+```bash
+for f in *.cpp; do g++ -std=c++20 -Wall -Wextra -Werror -O2 "$f" -o output && echo "=== $f ===" && ./output; done
+```
+
+### Quick Compile Only (no execution)
+```bash
+g++ -std=c++20 -Wall -Wextra -Werror -O2 map.cpp -o output
+```
+
+### Clean Up Executables
+```bash
+rm -f output array bitset deque forward_list list map multimap multiset numeric_algorithms pair_tuple priority_queue queue set stack string unordered_map unordered_multimap unordered_multiset unordered_set vector
+```
+
+### Available Files to Compile:
+```
+array, bitset, deque, forward_list, list, map, multimap, multiset,
+numeric_algorithms, pair_tuple, priority_queue, queue, set, stack, string,
+unordered_map, unordered_multimap, unordered_multiset, unordered_set, vector
+```
+
+---
+
+## 🎯 VS Code Build Integration (Linux/WSL)
+
+> Compile directly from VS Code with keyboard shortcut!
+
+### Quick Build (Compile Only)
+```
+Ctrl + Shift + B
+```
+Or: **Terminal** → **Run Build Task** → **C++20: Build active file**
+
+### Build & Run
+```
+Terminal → Run Task → C++20: Build & Run active file
+```
+
+**What it does:**
+- ✅ Compiles with `-std=c++20 -Wall -Wextra`
+- ✅ Creates executable in the same folder as the `.cpp` file
+- ✅ Shows color-coded errors/warnings
+- ✅ Auto-detects errors with problem matcher
+
+**Requires:** `.vscode/tasks.json` (already configured in this repo)
+
 ---
 
 ## 📝 C++20 Features Used

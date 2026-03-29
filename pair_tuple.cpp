@@ -33,7 +33,9 @@ int main() {
     cout << "structured binding: " << num << " = " << name << "\n";
     vector<pair<string,int>> kvs = {{"a",1},{"b",2},{"c",3}};
     cout << "map-like iteration: ";
-    for (auto& [k,v] : kvs) cout << k << ":" << v << " "; cout << "\n";
+    for (auto& [k,v] : kvs) {
+        cout << k << ":" << v << " \n";
+    }
     kvs.emplace_back("d", 4);
     cout << "after emplace: " << kvs.size() << " elements\n";
 
@@ -59,16 +61,22 @@ int main() {
     vector<pair<int,int>> edges = {{3,2},{1,5},{4,1},{1,3},{2,4}};
     ranges::sort(edges);
     cout << "sorted by default: ";
-    for (auto [u,v] : edges) cout << "(" << u << "," << v << ") "; cout << "\n";
+    for (auto [u,v] : edges) {
+        cout << "(" << u << "," << v << ") \n";
+    }
 
     ranges::sort(edges, [](auto& p, auto& q){ return -p.second < -q.second; });
     cout << "sorted by 2nd desc: ";
-    for (auto [u,v] : edges) cout << "(" << u << "," << v << ") "; cout << "\n";
+    for (auto [u,v] : edges) {
+        cout << "(" << u << "," << v << ") \n";
+    }
 
     vector<tuple<int,int,int>> graph = {{4,0,1},{2,0,2},{3,1,2},{1,2,3},{5,1,3}};
     ranges::sort(graph);
     cout << "Kruskal edges sorted by weight:\n";
-    for (auto [w,u,v] : graph) cout << "  u=" << u << " v=" << v << " w=" << w << "\n";
+    for (auto [w,u,v] : graph) {
+        cout << "  u=" << u << " v=" << v << " w=" << w << "\n";
+    }
 
     // ============================================================
     cout << "\n========== std::tuple [C++20] ==========\n";
@@ -124,8 +132,9 @@ int main() {
     vector<tuple<int,int,int>> events = {{3,1,5},{1,0,2},{3,0,3},{2,1,4}};
     ranges::sort(events);
     cout << "sorted events:\n";
-    for (auto [t,type,id] : events)
+    for (auto [t,type,id] : events) {
         cout << "  t=" << t << " type=" << type << " id=" << id << "\n";
+    }
 
     auto divmod = [](int a, int b){ return pair{a/b, a%b}; };
     auto [quot, rem] = divmod(17, 5);

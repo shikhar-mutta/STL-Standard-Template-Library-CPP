@@ -304,7 +304,9 @@ Programming Practice/
 ```powershell
 g++ -std=c++20 -O2 -Wall -o output.exe array.cpp; .\output.exe
 ```
-
+```powershell
+g++ -std=c++20 -O2 -Wall -o output.exe test.cpp; if ($?) { .\output.exe }
+```
 ---
 
 ## 🐧 Linux / Bash Compilation

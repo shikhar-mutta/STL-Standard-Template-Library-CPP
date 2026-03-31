@@ -27,6 +27,7 @@ int main()
     vector<int> v6(move(v5)); // v5 is now empty
 
     // C++20: from iota view
+    // ***
     auto rng = views::iota(1, 6);
     vector<int> v_range(rng.begin(), rng.end());
 
@@ -180,11 +181,15 @@ int main()
     v = {1, 2, 3, 4, 5};
     cout << "reduce (sum):  " << reduce(v.begin(), v.end(), 0) << "\n";
     vector<int> prefix(v.size());
+    // ***
     partial_sum(v.begin(), v.end(), prefix.begin());
     cout << "partial_sum (prefix): ";
     for (auto &x : prefix)
+    {
         cout << x << " \n";
+    }
     vector<int> idx(5);
+    // ***
     iota(idx.begin(), idx.end(), 1);
     cout << "iota(1..5): ";
     for (auto &x : idx)
@@ -195,6 +200,7 @@ int main()
     // 8. Ranges & Views Pipeline
     cout << "\n--- 8. Ranges Views Pipeline ---\n";
     v = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    // ***
     auto pipeline = v | views::filter([](int x)
                                       { return x % 2 == 0; }) |
                     views::transform([](int x)
@@ -223,7 +229,7 @@ int main()
     {
         cout << keys[i] << ":" << vals[i] << " \n";
     }
-
+    // ***
     auto mult3 = v | views::filter([](int x)
                                    { return x % 3 == 0; });
     cout << "multiples of 3: ";
@@ -231,6 +237,7 @@ int main()
     {
         cout << x << " \n";
     }
+
     // 9. 2D Vector
     cout << "\n--- 9. 2D Vector ---\n";
     int R = 3, C = 4;
@@ -256,6 +263,7 @@ int main()
     cout << "\n--- 10. CP Patterns ---\n";
     vector<int> raw = {40, 10, 30, 20, 10, 40, 30};
     vector<int> su = raw;
+    // ***
     ranges::sort(su);
     su.erase(ranges::unique(su).begin(), su.end());
     cout << "sorted unique: ";
@@ -274,6 +282,8 @@ int main()
         cout << x << " \n";
     }
     vector<int> perm = {1, 2, 3};
+
+    // ***
     cout << "all permutations: ";
     do
     {
@@ -281,6 +291,7 @@ int main()
     } while (ranges::next_permutation(perm).found);
     cout << "\n";
 
+    // ***
     string s = "abc";
     ranges::sort(s);
     cout << "string permutations: ";

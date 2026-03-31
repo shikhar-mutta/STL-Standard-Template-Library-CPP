@@ -13,13 +13,7 @@
 
 using namespace std;
 
-// Helper: print vector
-template<typename T>
-void print(const string& label, const vector<T>& v) {
-    cout << label << ": ";
-    for (auto& x : v) cout << x << " ";
-    cout << "\n";
-}
+
 
 int main() {
     cout << "========== std::vector [C++20] ==========\n";
@@ -37,9 +31,9 @@ int main() {
     auto rng = views::iota(1, 6);
     vector<int> v_range(rng.begin(), rng.end());
 
-    print("v2 (5x42)", v2);
-    print("v3 {1..5}", v3);
-    print("v_range",   v_range);
+    cout << "v2 (5x42): "; for (auto& x : v2) cout << x << " "; cout << "\n";
+    cout << "v3 {1..5}: "; for (auto& x : v3) cout << x << " "; cout << "\n";
+    cout << "v_range: "; for (auto& x : v_range) cout << x << " "; cout << "\n";
 
     // 2. Size & Capacity
     cout << "\n--- 2. Size & Capacity ---\n";
@@ -68,13 +62,13 @@ int main() {
     cout << "\n--- 4. Modifiers ---\n";
     v = {1, 2, 3};
     v.push_back(4); v.emplace_back(5);
-    print("after push_back/emplace_back", v);
-    v.pop_back(); print("after pop_back", v);
-    v.insert(v.begin()+1, 99); print("after insert(1,99)", v);
-    v.insert(v.end(), {100,200}); print("after insert range", v);
-    v.erase(v.begin()); print("after erase(begin)", v);
-    v.erase(v.begin(), v.begin()+2); print("after erase [0,2)", v);
-    v.assign({10,20,30,40,50}); print("after assign", v);
+    cout << "after push_back/emplace_back: "; for (auto& x : v) cout << x << " "; cout << "\n";
+    v.pop_back(); cout << "after pop_back: "; for (auto& x : v) cout << x << " "; cout << "\n";
+    v.insert(v.begin()+1, 99); cout << "after insert(1,99): "; for (auto& x : v) cout << x << " "; cout << "\n";
+    v.insert(v.end(), {100,200}); cout << "after insert range: "; for (auto& x : v) cout << x << " "; cout << "\n";
+    v.erase(v.begin()); cout << "after erase(begin): "; for (auto& x : v) cout << x << " "; cout << "\n";
+    v.erase(v.begin(), v.begin()+2); cout << "after erase [0,2): "; for (auto& x : v) cout << x << " "; cout << "\n";
+    v.assign({10,20,30,40,50}); cout << "after assign: "; for (auto& x : v) cout << x << " "; cout << "\n";
     v.clear(); cout << "after clear, size: " << v.size() << "\n";
 
     // 5. Iterators
@@ -88,8 +82,8 @@ int main() {
     // 6. Algorithms (C++20 ranges)
     cout << "\n--- 6. Algorithms ---\n";
     v = {5, 3, 1, 4, 2};
-    ranges::sort(v);    print("ranges::sort", v);
-    ranges::reverse(v); print("ranges::reverse", v);
+    ranges::sort(v);    cout << "ranges::sort: "; for (auto& x : v) cout << x << " "; cout << "\n";
+    ranges::reverse(v); cout << "ranges::reverse: "; for (auto& x : v) cout << x << " "; cout << "\n";
     auto it = ranges::find(v, 3);
     cout << "ranges::find(3): index " << distance(v.begin(), it) << "\n";
     cout << "ranges::count(3): " << ranges::count(v, 3) << "\n";
@@ -108,10 +102,10 @@ int main() {
     cout << "reduce (sum):  " << reduce(v.begin(), v.end(), 0) << "\n";
     vector<int> prefix(v.size());
     partial_sum(v.begin(), v.end(), prefix.begin());
-    print("partial_sum (prefix)", prefix);
+    cout << "partial_sum (prefix): "; for (auto& x : prefix) cout << x << " "; cout << "\n";
     vector<int> idx(5);
     iota(idx.begin(), idx.end(), 1);
-    print("iota(1..5)", idx);
+    cout << "iota(1..5): "; for (auto& x : idx) cout << x << " "; cout << "\n";
 
     // 8. Ranges & Views Pipeline
     cout << "\n--- 8. Ranges Views Pipeline ---\n";
@@ -150,10 +144,10 @@ int main() {
     vector<int> su = raw;
     ranges::sort(su);
     su.erase(ranges::unique(su).begin(), su.end());
-    print("sorted unique", su);
+    cout << "sorted unique: "; for (auto& x : su) cout << x << " "; cout << "\n";
     vector<int> compressed;
     for (int x : raw) compressed.push_back(distance(su.begin(), ranges::lower_bound(su, x)));
-    print("coordinate compressed", compressed);
+    cout << "coordinate compressed: "; for (auto& x : compressed) cout << x << " "; cout << "\n";
 
     vector<int> perm = {1,2,3};
     cout << "all permutations: ";

@@ -2,16 +2,18 @@
 // std::string — Dynamic String                  [C++20 Edition]
 // compile: g++ -std=c++20 -O2 string.cpp
 // ============================================================
-#include <string>
-#include <string_view>
-#include <format>
-#include <ranges>
-#include <algorithm>
-#include <vector>
-#include <sstream>
-#include <cctype>
-#include <numeric>
-#include <iostream>
+#include<bits/stdc++.h>
+// #include <string>
+// #include <string_view>
+// #include <format>
+// #include <ranges>
+// #include <algorithm>
+// #include <vector>
+// #include <sstream>
+// #include <cctype>
+// #include <numeric>
+// #include <iostream>
+
 
 using namespace std;
 

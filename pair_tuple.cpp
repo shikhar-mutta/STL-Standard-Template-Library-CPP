@@ -2,15 +2,16 @@
 // std::pair & std::tuple                        [C++20 Edition]
 // compile: g++ -std=c++20 -O2 pair_tuple.cpp
 // ============================================================
-#include <utility>
-#include <tuple>
-#include <vector>
-#include <algorithm>
-#include <ranges>
-#include <string>
-#include <cmath>
-#include <optional>
-#include <iostream>
+#include<bits/stdc++.h>
+// #include <utility>
+// #include <tuple>
+// #include <vector>
+// #include <algorithm>
+// #include <ranges>
+// #include <string>
+// #include <cmath>
+// #include <optional>
+// #include <iostream>
 
 using namespace std;
 

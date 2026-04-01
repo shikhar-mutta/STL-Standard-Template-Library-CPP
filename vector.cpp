@@ -2,14 +2,15 @@
 // std::vector — Dynamic Array                    [C++20 Edition]
 // compile: g++ -std=c++20 -O2 vector.cpp
 // ============================================================
-#include <vector>
-#include <algorithm>
-#include <ranges>
-#include <numeric>
-#include <span>
-#include <format>
-#include <iostream>
-#include <string>
+#include<bits/stdc++.h>
+// #include <vector>
+// #include <algorithm>
+// #include <ranges>
+// #include <numeric>
+// #include <span>
+// #include <format>
+// #include <iostream>
+// #include <string>
 
 using namespace std;
 

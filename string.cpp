@@ -25,12 +25,13 @@ int main()
     string s2 = "hello";
     string s3(5, 'x');
     string s5 = s2 + " " + "world";
+    // ***
     string_view sv = "hello world";
-    cout << "s2:             " << s2 << "\n";
-    cout << "s3 (5 x's):    " << s3 << "\n";
-    cout << "s5:             " << s5 << "\n";
-    cout << "sv (string_view): " << sv << "\n";
-    cout << "sv.substr(6,5): " << sv.substr(6, 5) << "\n";
+    cout << "s2:                " << s2 << "\n";
+    cout << "s3 (5 x's):        " << s3 << "\n";
+    cout << "s5:                " << s5 << "\n";
+    cout << "sv (string_view):  " << sv << "\n";
+    cout << "sv.substr(6,5):    " << sv.substr(6, 5) << "\n";
 
     // 2. Size & Capacity
     cout << "\n--- 2. Size & Capacity ---\n";
@@ -60,57 +61,57 @@ int main()
     cout << "\n--- 4. Modifiers ---\n";
     string m = "hello";
     m += " world";
-    cout << "+=:             " << m << "\n";
+    cout << "+=:                " << m << "\n";
     m.append("!!!");
-    cout << "append():       " << m << "\n";
+    cout << "append():          " << m << "\n";
     m.append(3, '?');
-    cout << "append(3,'?'):  " << m << "\n";
+    cout << "append(3,'?'):     " << m << "\n";
     m.push_back('!');
-    cout << "push_back:      " << m << "\n";
+    cout << "push_back:         " << m << "\n";
     m.pop_back();
-    cout << "pop_back:       " << m << "\n";
+    cout << "pop_back:          " << m << "\n";
     m.insert(5, " C++20");
-    cout << "insert(5,...):  " << m << "\n";
+    cout << "insert(5,...):     " << m << "\n";
     m.erase(0, 6);
-    cout << "erase(0,6):     " << m << "\n";
+    cout << "erase(0,6):        " << m << "\n";
     m.replace(0, 5, "Hi");
-    cout << "replace(0,5,...): " << m << "\n";
+    cout << "replace(0,5,...):  " << m << "\n";
     m.assign("brand new string");
-    cout << "assign():     " << m << "\n";
+    cout << "assign():          " << m << "\n";
 
     // 5. Search
     cout << "\n--- 5. Search ---\n";
     string text = "the cat sat on the mat";
-    cout << "find(\"cat\"):          " << text.find("cat") << "\n";
-    cout << "find(\"dog\"):          " << (text.find("dog") == string::npos ? "npos" : "found") << "\n";
-    cout << "rfind(\"the\"):         " << text.rfind("the") << "\n";
-    cout << "find(\"the\",5):        " << text.find("the", 5) << "\n";
-    cout << "find_first_of(vowels):" << text.find_first_of("aeiou") << "\n";
-    cout << "find_last_of(vowels): " << text.find_last_of("aeiou") << "\n";
+    cout << "find(\"cat\"):                 " << text.find("cat") << "\n";
+    cout << "find(\"dog\"):                 " << (text.find("dog") == string::npos ? "npos" : "found") << "\n";
+    cout << "rfind(\"the\"):                " << text.rfind("the") << "\n";
+    cout << "find(\"the\",5):               " << text.find("the", 5) << "\n";
+    cout << "find_first_of(vowels):       " << text.find_first_of("aeiou") << "\n";
+    cout << "find_last_of(vowels):        " << text.find_last_of("aeiou") << "\n";
     string trimable = "   hello   ";
     size_t sp = trimable.find_first_not_of(' '), ep = trimable.find_last_not_of(' ');
-    cout << "trimmed: '" << trimable.substr(sp, ep - sp + 1) << "'\n";
-    cout << "contains(\"cat\") via find: " << (text.find("cat") != string::npos) << "\n";
-    cout << "contains(\"dog\") via find: " << (text.find("dog") != string::npos) << "\n";
-    cout << "starts_with(\"the\"): " << text.starts_with("the") << "\n";
-    cout << "ends_with(\"mat\"):   " << text.ends_with("mat") << "\n";
+    cout << "trimmed:                     '" << trimable.substr(sp, ep - sp + 1) << "'\n";
+    cout << "contains(\"cat\") via find:    " << (text.find("cat") != string::npos) << "\n";
+    cout << "contains(\"dog\") via find:    " << (text.find("dog") != string::npos) << "\n";
+    cout << "starts_with(\"the\"):          " << text.starts_with("the") << "\n";
+    cout << "ends_with(\"mat\"):            " << text.ends_with("mat") << "\n";
 
     // 6. Substring & Compare
     cout << "\n--- 6. Substring & Compare ---\n";
     string base = "abcdefgh";
-    cout << "substr(2,4): " << base.substr(2, 4) << "\n";
-    cout << "substr(5):   " << base.substr(5) << "\n";
-    cout << "compare(abc,abc): " << string("abc").compare("abc") << "\n";
-    cout << "\"abc\" < \"abd\": " << (string("abc") < string("abd")) << "\n";
+    cout << "substr(2,4):       " << base.substr(2, 4) << "\n";
+    cout << "substr(5):         " << base.substr(5) << "\n";
+    cout << "compare(abc,abc):  " << string("abc").compare("abc") << "\n";
+    cout << "\"abc\" < \"abd\":     " << (string("abc") < string("abd")) << "\n";
 
     // 7. Conversions
     cout << "\n--- 7. Conversions ---\n";
-    cout << "stoi(\"42\"):         " << stoi("42") << "\n";
-    cout << "stoll(\"123456789012\"): " << stoll("123456789012") << "\n";
-    cout << "stod(\"3.14\"):       " << stod("3.14") << "\n";
-    cout << "to_string(12345):   " << to_string(12345) << "\n";
+    cout << "stoi(\"42\"):              " << stoi("42") << "\n";
+    cout << "stoll(\"123456789012\"):   " << stoll("123456789012") << "\n";
+    cout << "stod(\"3.14\"):            " << stod("3.14") << "\n";
+    cout << "to_string(12345):          " << to_string(12345) << "\n";
     string formatted = format("Pi={:.4f}, Answer={}", 3.14159, 42);
-    cout << "format result: " << formatted << "\n";
+    cout << "format result:         " << formatted << "\n";
     cout << "right-align: '" << format("{:>10}", "hello") << "'\n";
     cout << "left-align:  '" << format("{:<10}", "hello") << "'\n";
     cout << "center:      '" << format("{:^10}", "hello") << "'\n";
@@ -138,12 +139,14 @@ int main()
     ranges::transform(lower_s, lower_s.begin(), ::tolower);
     cout << "tolower: " << lower_s << "\n";
 
+    // ***
     string pal = "racecar";
     bool isPalin = ranges::equal(pal, pal | views::reverse);
     cout << "\"racecar\" palindrome: " << isPalin << "\n";
 
     // 9. string_view
     cout << "\n--- 9. string_view ---\n";
+    //    ***
     auto process = [](string_view sv2)
     {
         cout << "sv length=" << sv2.length() << "  starts_with 'H': " << sv2.starts_with('H') << "\n";
@@ -159,6 +162,7 @@ int main()
     stringstream ss(line);
     string token;
     cout << "tokens: ";
+    // ***
     while (ss >> token)
         cout << token << " ";
     cout << "\n";
@@ -194,50 +198,11 @@ int main()
     for (int i = 0; i < 26; i++)
     {
         if (freq[i])
+        {
             cout << (char)('a' + i) << ":" << freq[i] << " ";
-        cout << "\n";
-    }
-
-    // KMP pattern matching
-    auto buildLPS = [](string_view pat)
-    {
-        int m = pat.size();
-        vector<int> lps(m, 0);
-        for (int i = 1, len = 0; i < m;)
-        {
-            if (pat[i] == pat[len])
-                lps[i++] = ++len;
-            else if (len)
-                len = lps[len - 1];
-            else
-                lps[i++] = 0;
-        }
-        return lps;
-    };
-    string_view txt = "aabaacaadaabaabaab", pat = "aab";
-    auto lps = buildLPS(pat);
-    cout << "KMP positions of \"" << pat << "\" in text: ";
-    for (int i = 0, j = 0; i < (int)txt.size();)
-    {
-        if (txt[i] == pat[j])
-        {
-            i++;
-            j++;
-        }
-        if (j == (int)pat.size())
-        {
-            cout << i - j << " ";
-            j = lps[j - 1];
-        }
-        else if (i < (int)txt.size() && txt[i] != pat[j])
-        {
-            if (j)
-                j = lps[j - 1];
-            else
-                i++;
+            cout << "\n";
         }
     }
-    cout << "\n";
 
     return 0;
 }

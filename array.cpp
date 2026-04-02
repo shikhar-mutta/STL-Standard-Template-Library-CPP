@@ -161,7 +161,7 @@ int main()
     cout << "\n";
     cout << "sum: " << reduce(powers.begin(), powers.end()) << "\n";
 
-        // 9. 2D Array
+    // 9. 2D Array
     cout << "\n--- 9. 2D Array ---\n";
     array<array<int, 3>, 3> mat = {{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}};
     cout << "3x3 matrix:\n";
@@ -181,7 +181,7 @@ int main()
         cout << v << " ";
     }
     cout << "\n";
-    
+
     // 10. Comparison
     cout << "\n--- 10. Comparison ---\n";
     array<int, 3> p1 = {1, 2, 3}, p2 = {1, 2, 4}, p3 = {1, 2, 3};

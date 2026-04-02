@@ -22,33 +22,33 @@ int main()
     array<int, 5> a2 = {1, 2, 3, 4, 5};
     array a3 = {10, 20, 30, 40}; // C++17 CTAD
     array<int, 5> a4;
+    // ***
     a4.fill(7);
 
     cout << "a1 (zero):   ";
     for (int x : a1)
     {
         cout << x << " ";
-        cout << "\n";
     }
+    cout << "\n";
     cout << "a2:          ";
     for (int x : a2)
     {
         cout << x << " ";
-        cout << "\n";
     }
+    cout << "\n";
     cout << "a3 (CTAD):   ";
     for (int x : a3)
     {
         cout << x << " ";
-        cout << "\n";
     }
+    cout << "\n";
     cout << "a4 (fill 7): ";
     for (int x : a4)
     {
         cout << x << " ";
-        cout << "\n";
     }
-
+    cout << "\n";
     // 2. Size & Metadata
     cout << "\n--- 2. Size & Metadata ---\n";
     cout << "size():      " << a2.size() << "\n";

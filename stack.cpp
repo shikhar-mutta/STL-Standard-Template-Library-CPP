@@ -87,11 +87,11 @@ int main()
     cout << "array: ";
     for (int x : arr)
         cout << x << " ";
-    cout << "\n";
+    cout << " \n";
     cout << "NGE:   ";
     for (int x : nge)
         cout << x << " ";
-    cout << "\n ";
+    cout << " \n";
 
     // 4. Daily Temperatures
     cout << "\n--- 4. Daily Temperatures ---\n";

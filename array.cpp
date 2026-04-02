@@ -26,20 +26,28 @@ int main()
 
     cout << "a1 (zero):   ";
     for (int x : a1)
+    {
         cout << x << " ";
-    cout << "\n";
+        cout << "\n";
+    }
     cout << "a2:          ";
     for (int x : a2)
+    {
         cout << x << " ";
-    cout << "\n";
+        cout << "\n";
+    }
     cout << "a3 (CTAD):   ";
     for (int x : a3)
+    {
         cout << x << " ";
-    cout << "\n";
+        cout << "\n";
+    }
     cout << "a4 (fill 7): ";
     for (int x : a4)
+    {
         cout << x << " ";
-    cout << "\n";
+        cout << "\n";
+    }
 
     // 2. Size & Metadata
     cout << "\n--- 2. Size & Metadata ---\n";
@@ -73,26 +81,33 @@ int main()
     array<int, 5> arr = {5, 3, 1, 4, 2};
     cout << "forward: ";
     for (int v : arr)
+    {
         cout << v << " ";
-    cout << "\n";
+        cout << "\n";
+    }
     cout << "reverse: ";
     for (auto rit = arr.rbegin(); rit != arr.rend(); ++rit)
+    {
         cout << *rit << " ";
-    cout << "\n";
-
+        cout << "\n";
+    }
     // 6. Algorithms (C++20 ranges)
     cout << "\n--- 6. Algorithms ---\n";
     array<int, 5> alg = {5, 3, 1, 4, 2};
     ranges::sort(alg);
     cout << "sorted:   ";
     for (int v : alg)
+    {
         cout << v << " ";
-    cout << "\n";
+        cout << "\n";
+    }
     ranges::reverse(alg);
     cout << "reversed: ";
     for (int v : alg)
+    {
         cout << v << " ";
-    cout << "\n";
+        cout << "\n";
+    }
     cout << "min: " << ranges::min(alg) << "  max: " << ranges::max(alg) << "\n";
     cout << "sum: " << reduce(alg.begin(), alg.end()) << "\n";
     ranges::sort(alg);
@@ -102,9 +117,10 @@ int main()
     iota(idx.begin(), idx.end(), 0);
     cout << "iota: ";
     for (int v : idx)
+    {
         cout << v << " ";
-    cout << "\n";
-
+        cout << "\n";
+    }
     // 7. std::span (C++20)
     cout << "\n--- 7. std::span ---\n";
     array<int, 8> big = {1, 2, 3, 4, 5, 6, 7, 8};
@@ -112,12 +128,16 @@ int main()
     span<int> half = full_span.subspan(2, 4);
     cout << "full:        ";
     for (int v : full_span)
+    {
         cout << v << " ";
-    cout << "\n";
+        cout << "\n";
+    }
     cout << "subspan(2,4):";
     for (int v : half)
+    {
         cout << v << " ";
-    cout << "\n";
+        cout << "\n";
+    }
     auto sum_span = [](span<const int> sp)
     { return reduce(sp.begin(), sp.end()); };
     cout << "sum of subspan: " << sum_span(half) << "\n";
@@ -128,8 +148,10 @@ int main()
     static_assert(powers[3] == 8);
     cout << "powers of 2: ";
     for (int v : powers)
+    {
         cout << v << " ";
-    cout << "\n";
+        cout << "\n";
+    }
     cout << "sum: " << reduce(powers.begin(), powers.end()) << "\n";
 
     // 9. 2D Array
@@ -140,15 +162,18 @@ int main()
     {
         cout << "  ";
         for (int v : row)
+        {
             cout << v << " ";
+        }
         cout << "\n";
     }
     auto [r0, r1, r2] = mat;
     cout << "row 0: ";
     for (int v : r0)
+    {
         cout << v << " ";
-    cout << "\n";
-
+        cout << "\n";
+    }
     // 10. Comparison
     cout << "\n--- 10. Comparison ---\n";
     array<int, 3> p1 = {1, 2, 3}, p2 = {1, 2, 4}, p3 = {1, 2, 3};

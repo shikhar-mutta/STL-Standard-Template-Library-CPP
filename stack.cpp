@@ -93,7 +93,7 @@ int main()
         cout << x << " ";
     cout << " \n";
 
-     // 4. Daily Temperatures
+    // 4. Daily Temperatures
     cout << "\n--- 4. Daily Temperatures ---\n";
     vector<int> temps = {73, 74, 75, 71, 69, 72, 76, 73};
     vector<int> wait(temps.size(), 0);
@@ -109,12 +109,16 @@ int main()
     }
     cout << "temps: ";
     for (int x : temps)
-        {cout << x << " ";}
-    cout << "\n";
+    {
+        cout << x << " ";
+    }
+    cout << " \n";
     cout << "days:  ";
     for (int x : wait)
-        {cout << x << " ";}
-    cout << "\n";
+    {
+        cout << x << " ";
+    }
+    cout << " \n";
 
     // 5. Largest Rectangle in Histogram
     cout << "\n--- 5. Largest Rectangle in Histogram ---\n";

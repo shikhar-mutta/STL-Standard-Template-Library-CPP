@@ -67,7 +67,7 @@ int main()
     cout << "a.back(): " << a.back() << "\n";
     // ***
     cout << "data():   " << (void *)a.data() << "\n";
-    
+
     // 4. Structured Bindings (C++17)
     cout << "\n--- 4. Structured Bindings ---\n";
     array<int, 3> pt = {1, 2, 3};
@@ -78,21 +78,23 @@ int main()
     auto [from, to] = edge;
     cout << "edge: " << from << " -> " << to << "\n";
 
-    // 5. Iterators
+        // 5. Iterators
     cout << "\n--- 5. Iterators ---\n";
     array<int, 5> arr = {5, 3, 1, 4, 2};
     cout << "forward: ";
     for (int v : arr)
     {
         cout << v << " ";
-        cout << "\n";
     }
+    cout << "\n";
     cout << "reverse: ";
+    // ***
     for (auto rit = arr.rbegin(); rit != arr.rend(); ++rit)
     {
         cout << *rit << " ";
-        cout << "\n";
     }
+    cout << "\n";
+    
     // 6. Algorithms (C++20 ranges)
     cout << "\n--- 6. Algorithms ---\n";
     array<int, 5> alg = {5, 3, 1, 4, 2};

@@ -18,21 +18,21 @@ int main() {
     cout << "\n--- 1. Basic Stack ---\n";
     stack<int> s;
     s.push(1); s.push(2); s.push(3); s.push(4); s.emplace(5);
-    cout << "top:   " << s.top()  << "\n";
-    cout << "size:  " << s.size() << "\n";
-    cout << "empty: " << s.empty()<< "\n";
+       cout << "top:   " << s.top()  << " \n";
+    cout << "size:  " << s.size() << " \n";
+    cout << "empty: " << s.empty()<< " \n";
     cout << "pop order (LIFO): ";
     while (!s.empty()) { cout << s.top() << " "; s.pop(); }
-    cout << "\n";
+    cout << " \n";
 
     stack<int,vector<int>> vec_stack;
     vec_stack.push(10); vec_stack.push(20);
-    cout << "vector-backed stack top: " << vec_stack.top() << "\n";
+    cout << "vector-backed stack top: " << vec_stack.top() << " \n";
 
     stack<int> sa, sb;
     sa.push(1); sb.push(99);
     sa.swap(sb);
-    cout << "after swap, sa.top = " << sa.top() << "\n";
+    cout << "after swap, sa.top = " << sa.top() << " \n";
 
     // 2. Balanced Parentheses
     cout << "\n--- 2. Balanced Parentheses ---\n";

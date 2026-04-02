@@ -91,7 +91,7 @@ int main()
     cout << "NGE:   ";
     for (int x : nge)
         cout << x << " ";
-    cout << "\n";
+    cout << "\n ";
 
     // 4. Daily Temperatures
     cout << "\n--- 4. Daily Temperatures ---\n";

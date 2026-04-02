@@ -120,7 +120,7 @@ int main()
     }
     cout << " \n";
 
-      // 5. Largest Rectangle in Histogram
+    // 5. Largest Rectangle in Histogram
     cout << "\n--- 5. Largest Rectangle in Histogram ---\n";
     vector<int> heights = {2, 1, 5, 6, 2, 3};
     int max_area = 0;
@@ -140,7 +140,9 @@ int main()
     }
     cout << "histogram: ";
     for (int x : heights)
-        {cout << x << " ";}
+    {
+        cout << x << " ";
+    }
     cout << " \n";
     cout << "largest rectangle area: " << max_area << " \n";
 

@@ -1,0 +1,4 @@
+std::endl → inserts a new line and flushes the output buffer (slower).
+
+
+

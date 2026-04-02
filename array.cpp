@@ -190,7 +190,7 @@ int main()
     auto cmp = p1 <=> p2;
     cout << "p1 <=> p2 is less: " << (cmp < 0) << "\n";
 
-       // 11. CP Patterns
+    // 11. CP Patterns
     cout << "\n--- 11. CP Patterns ---\n";
     // ***
     constexpr array<array<int, 2>, 4> dirs4 = {{{0, 1}, {0, -1}, {1, 0}, {-1, 0}}};

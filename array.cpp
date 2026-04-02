@@ -182,7 +182,7 @@ int main()
     }
     cout << "\n";
 
-        // 10. Comparison
+    // 10. Comparison
     cout << "\n--- 10. Comparison ---\n";
     array<int, 3> p1 = {1, 2, 3}, p2 = {1, 2, 4}, p3 = {1, 2, 3};
     cout << "p1 == p3: " << (p1 == p3) << "\n";

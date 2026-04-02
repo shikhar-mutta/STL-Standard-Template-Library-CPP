@@ -203,8 +203,9 @@ int main()
         }
         return stk.top();
     };
-    cout << "2 1 + 3 * = " << evalRPN({"2", "1", "+", "3", "*"}) << "  (expected 9)\n";
-    cout << "4 13 5 / + = " << evalRPN({"4", "13", "5", "/", "+"}) << "  (expected 6)\n";
+    cout << "2 1 + 3 * = " << evalRPN({"2", "1", "+", "3", "*"}) << "  (expected 9) \n";
+    
+    cout << "4 13 5 / + = " << evalRPN({"4", "13", "5", "/", "+"}) << "  (expected 6) \n";
 
     // 8. DFS using explicit stack
     cout << "\n--- 8. DFS (Explicit Stack) ---\n";

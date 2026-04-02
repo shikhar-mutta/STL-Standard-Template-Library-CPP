@@ -57,6 +57,7 @@ int main()
     constexpr size_t SZ = tuple_size_v<decltype(a2)>;
     cout << "constexpr size: " << SZ << "\n";
 
+    
     // 3. Access
     cout << "\n--- 3. Access ---\n";
     array<int, 5> a = {10, 20, 30, 40, 50};
@@ -64,8 +65,9 @@ int main()
     cout << "a.at(2):  " << a.at(2) << "\n";
     cout << "a.front():" << a.front() << "\n";
     cout << "a.back(): " << a.back() << "\n";
+    // ***
     cout << "data():   " << (void *)a.data() << "\n";
-
+    
     // 4. Structured Bindings (C++17)
     cout << "\n--- 4. Structured Bindings ---\n";
     array<int, 3> pt = {1, 2, 3};

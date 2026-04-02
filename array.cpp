@@ -95,7 +95,7 @@ int main()
     }
     cout << "\n";
     
-    // 6. Algorithms (C++20 ranges)
+        // 6. Algorithms (C++20 ranges)
     cout << "\n--- 6. Algorithms ---\n";
     array<int, 5> alg = {5, 3, 1, 4, 2};
     ranges::sort(alg);
@@ -103,28 +103,30 @@ int main()
     for (int v : alg)
     {
         cout << v << " ";
-        cout << "\n";
     }
+    cout << "\n";
     ranges::reverse(alg);
     cout << "reversed: ";
     for (int v : alg)
     {
         cout << v << " ";
-        cout << "\n";
     }
+    cout << "\n";
     cout << "min: " << ranges::min(alg) << "  max: " << ranges::max(alg) << "\n";
     cout << "sum: " << reduce(alg.begin(), alg.end()) << "\n";
     ranges::sort(alg);
     cout << "binary_search(3): " << ranges::binary_search(alg, 3) << "\n";
 
     array<int, 5> idx{};
+    // ***
     iota(idx.begin(), idx.end(), 0);
     cout << "iota: ";
     for (int v : idx)
     {
         cout << v << " ";
-        cout << "\n";
     }
+    cout << "\n";
+
     // 7. std::span (C++20)
     cout << "\n--- 7. std::span ---\n";
     array<int, 8> big = {1, 2, 3, 4, 5, 6, 7, 8};

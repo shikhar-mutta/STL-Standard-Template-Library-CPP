@@ -47,28 +47,21 @@ int main()
 
     // 2. Balanced Parentheses
     cout << "\n--- 2. Balanced Parentheses ---\n";
-    auto isBalanced = [](string_view expr)
-    {
+    auto isBalanced = [](string_view expr) {
         stack<char> stk;
-        for (char c : expr)
-        {
-            if (c == '(' || c == '[' || c == '{')
-                stk.push(c);
-            else if (c == ')' || c == ']' || c == '}')
-            {
-                if (stk.empty())
-                    return false;
-                char top = stk.top();
-                stk.pop();
-                if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{'))
-                    return false;
+        for (char c : expr) {
+            if (c=='(' || c=='[' || c=='{') stk.push(c);
+            else if (c==')' || c==']' || c=='}') {
+                if (stk.empty()) return false;
+                char top = stk.top(); stk.pop();
+                if ((c==')' && top!='(') || (c==']' && top!='[') || (c=='}' && top!='{')) return false;
             }
         }
         return stk.empty();
     };
-    cout << "\"{[()]}\"  balanced: " << isBalanced("{[()]}") << "\n";
-    cout << "\"{[(])}\"  balanced: " << isBalanced("{[(])}") << "\n";
-    cout << "\"(((\"     balanced: " << isBalanced("(((") << "\n";
+            cout << "\"{[()]}\"  balanced: " << isBalanced("{[()]}") << " \n";
+    cout << "\"{[(])}\"  balanced: " << isBalanced("{[(])}") << " \n";
+    cout << "\"(((\"     balanced: " << isBalanced("(((")    << " \n";
 
     // 3. Next Greater Element — Monotonic Stack
     cout << "\n--- 3. Next Greater Element ---\n";

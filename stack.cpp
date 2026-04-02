@@ -206,7 +206,7 @@ int main()
     cout << "2 1 + 3 * = " << evalRPN({"2", "1", "+", "3", "*"}) << "  (expected 9) \n";
     cout << "4 13 5 / + = " << evalRPN({"4", "13", "5", "/", "+"}) << "  (expected 6) \n";
 
-    // 8. DFS using explicit stack
+      // 8. DFS using explicit stack
     cout << "\n--- 8. DFS (Explicit Stack) ---\n";
     int V = 6;
     vector<vector<int>> adj(V);
@@ -219,18 +219,20 @@ int main()
     stack<int> dfs_stk;
     dfs_stk.push(0);
     vis[0] = true;
-    cout << "DFS order: ";
+    cout << "DFS order: \n";
     while (!dfs_stk.empty())
     {
         int node = dfs_stk.top();
         dfs_stk.pop();
         cout << node << " ";
+        // *** Important: To get the correct DFS order, we need to push neighbors in reverse order
         for (int nb : adj[node] | views::reverse)
+          { cout << "nb: " << nb << "\n"; 
             if (!vis[nb])
             {
                 vis[nb] = true;
                 dfs_stk.push(nb);
-            }
+            }}
     }
     cout << "\n";
 

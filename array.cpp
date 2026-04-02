@@ -131,23 +131,24 @@ int main()
     cout << "\n--- 7. std::span ---\n";
     array<int, 8> big = {1, 2, 3, 4, 5, 6, 7, 8};
     span<int> full_span{big};
+    // ***
     span<int> half = full_span.subspan(2, 4);
     cout << "full:        ";
     for (int v : full_span)
     {
         cout << v << " ";
-        cout << "\n";
     }
+    cout << "\n";
     cout << "subspan(2,4):";
     for (int v : half)
     {
         cout << v << " ";
-        cout << "\n";
     }
+    cout << "\n";
     auto sum_span = [](span<const int> sp)
     { return reduce(sp.begin(), sp.end()); };
     cout << "sum of subspan: " << sum_span(half) << "\n";
-
+    
     // 8. constexpr Array
     cout << "\n--- 8. constexpr Array ---\n";
     constexpr array<int, 5> powers = {1, 2, 4, 8, 16};

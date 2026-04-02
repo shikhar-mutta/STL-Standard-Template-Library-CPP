@@ -57,7 +57,6 @@ int main()
     constexpr size_t SZ = tuple_size_v<decltype(a2)>;
     cout << "constexpr size: " << SZ << "\n";
 
-    
     // 3. Access
     cout << "\n--- 3. Access ---\n";
     array<int, 5> a = {10, 20, 30, 40, 50};
@@ -78,7 +77,7 @@ int main()
     auto [from, to] = edge;
     cout << "edge: " << from << " -> " << to << "\n";
 
-        // 5. Iterators
+    // 5. Iterators
     cout << "\n--- 5. Iterators ---\n";
     array<int, 5> arr = {5, 3, 1, 4, 2};
     cout << "forward: ";
@@ -94,8 +93,8 @@ int main()
         cout << *rit << " ";
     }
     cout << "\n";
-    
-        // 6. Algorithms (C++20 ranges)
+
+    // 6. Algorithms (C++20 ranges)
     cout << "\n--- 6. Algorithms ---\n";
     array<int, 5> alg = {5, 3, 1, 4, 2};
     ranges::sort(alg);
@@ -148,19 +147,20 @@ int main()
     auto sum_span = [](span<const int> sp)
     { return reduce(sp.begin(), sp.end()); };
     cout << "sum of subspan: " << sum_span(half) << "\n";
-    
+
     // 8. constexpr Array
     cout << "\n--- 8. constexpr Array ---\n";
+    // ***   creates an array at compile-time with fixed values.
     constexpr array<int, 5> powers = {1, 2, 4, 8, 16};
     static_assert(powers[3] == 8);
     cout << "powers of 2: ";
     for (int v : powers)
     {
         cout << v << " ";
-        cout << "\n";
     }
+    cout << "\n";
     cout << "sum: " << reduce(powers.begin(), powers.end()) << "\n";
-
+    
     // 9. 2D Array
     cout << "\n--- 9. 2D Array ---\n";
     array<array<int, 3>, 3> mat = {{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}};

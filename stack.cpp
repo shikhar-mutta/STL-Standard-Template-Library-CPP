@@ -168,11 +168,11 @@ int main()
     };
     MinStack ms;
     for (int x : {5, 3, 7, 1, 4, 1, 6})
-        ms.push(x);
+        {ms.push(x);}
     cout << "top: " << ms.top() << "  min: " << ms.getMin() << "\n";
     ms.pop();
     ms.pop();
-    cout << "after 2 pops — top: " << ms.top() << "  min: " << ms.getMin() << "\n";
+    cout << "after 2 pops - top: " << ms.top() << "  min: " << ms.getMin() << "\n";
 
     // 7. Evaluate Postfix Expression
     cout << "\n--- 7. Postfix Evaluation ---\n";

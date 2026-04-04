@@ -181,15 +181,17 @@ int main()
     tasks.emplace_back("task3");
     cout << "task queue: ";
     for (auto &t : tasks)
+    {
         cout << t << " ";
-    cout << "\n";
+    }
+    cout << " \n";
     cout << "processing: ";
     while (!tasks.empty())
     {
         cout << tasks.front() << " ";
         tasks.pop_front();
     }
-    cout << "\n";
+    cout << " \n";
 
     // 7. Ranges on Deque
     cout << "\n--- 7. Ranges on Deque ---\n";

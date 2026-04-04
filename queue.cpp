@@ -37,13 +37,13 @@ int main()
     pq.emplace(1, 2);
     pq.emplace(3, 4);
     auto [f1, f2] = pq.front();
-    cout << "front pair: (" << f1 << "," << f2 << ")\n";
+    cout << "front pair: (" << f1 << "," << f2 << ") \n";
 
     queue<int> qa, qb;
     qa.push(1);
     qb.push(99);
     qa.swap(qb);
-    cout << "after swap, qa.front = " << qa.front() << "\n";
+    cout << "after swap, qa.front = " << qa.front() << " \n";
 
     // 2. BFS — Level-Order Traversal
     cout << "\n--- 2. BFS (Level-Order Traversal) ---\n";

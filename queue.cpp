@@ -102,7 +102,7 @@ int main()
             }
         }
     }
-    cout << "shortest path to (3,3): " << dist_grid[3][3] << "\n";
+    cout << "shortest path to (3,3): " << dist_grid[3][3] << " \n";
 
     // ============================================================
     cout << "\n========== std::deque ==========\n";

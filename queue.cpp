@@ -108,7 +108,8 @@ int main() {
         if (i >= k-1) max_result.push_back(nums[mono_dq.front()]);
     }
     cout << "sliding window max (k=" << k << "): ";
-    for (int x : max_result) cout << x << " "; cout << "\n";
+    for (int x : max_result) cout << x << " ";
+    cout << "\n";
 
     // 6. Double-Ended Task Queue
     cout << "\n--- 6. Double-Ended Operations ---\n";

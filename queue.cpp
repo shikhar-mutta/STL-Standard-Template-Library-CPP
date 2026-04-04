@@ -152,17 +152,25 @@ int main()
     for (int i = 0; i < (int)nums.size(); i++)
     {
         while (!mono_dq.empty() && mono_dq.front() < i - k + 1)
+        {
             mono_dq.pop_front();
+        }
         while (!mono_dq.empty() && nums[mono_dq.back()] < nums[i])
+        {
             mono_dq.pop_back();
+        }
         mono_dq.push_back(i);
         if (i >= k - 1)
+        {
             max_result.push_back(nums[mono_dq.front()]);
+        }
     }
     cout << "sliding window max (k=" << k << "): ";
     for (int x : max_result)
+    {
         cout << x << " ";
-    cout << "\n";
+    }
+    cout << " \n";
 
     // 6. Double-Ended Task Queue
     cout << "\n--- 6. Double-Ended Operations ---\n";

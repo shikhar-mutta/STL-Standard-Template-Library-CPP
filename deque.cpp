@@ -78,7 +78,7 @@ int main()
     d.erase(d.begin(), d.begin() + 2);
     print_deque("after erase [0,2)", d);
     d.clear();
-    cout << "after clear, size: " << d.size() << "\n";
+    cout << "after clear, size: " << d.size() << " \n";
 
     // 6. Algorithms
     cout << "\n--- 6. Algorithms ---\n";

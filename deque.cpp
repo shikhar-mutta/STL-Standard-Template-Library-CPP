@@ -41,9 +41,9 @@ int main()
 
     // 2. Size
     cout << "\n--- 2. Size ---\n";
-    cout << "size():     " << d2.size() << "\n";
-    cout << "max_size(): " << d2.max_size() << "\n";
-    cout << "empty():    " << d1.empty() << "\n";
+    cout << "size():     " << d2.size() << " \n";
+    cout << "max_size(): " << d2.max_size() << " \n";
+    cout << "empty():    " << d1.empty() << " \n";
     d2.resize(7, 99);
     print_deque("after resize(7,99)", d2);
 

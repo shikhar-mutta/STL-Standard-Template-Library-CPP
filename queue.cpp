@@ -16,7 +16,7 @@ int main() {
     cout << "========== std::queue [C++20] ==========\n";
 
     // 1. Basic Operations
-    cout << "\n--- 1. Basic Operations ---\n";
+        cout << "\n--- 1. Basic Operations ---\n";
     queue<int> q;
     q.push(1); q.push(2); q.push(3); q.push(4); q.push(5);
     cout << "front: " << q.front() << "  back: " << q.back() << "  size: " << q.size() << "\n";

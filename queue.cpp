@@ -31,7 +31,7 @@ int main()
         cout << q.front() << " ";
         q.pop();
     }
-    cout << "\n";
+    cout << " \n";
 
     queue<pair<int, int>> pq;
     pq.emplace(1, 2);

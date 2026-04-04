@@ -57,7 +57,6 @@ int main()
 
     // 4. Push/Pop Both Ends — O(1)
     cout << "\n--- 4. Push/Pop Both Ends ---\n";
-    
     d = {2, 3, 4};
     d.push_front(1);
     d.push_back(5);

@@ -90,9 +90,9 @@ int main()
     ranges::sort(ad);
     auto lb = ranges::lower_bound(ad, 3);
     auto ub = ranges::upper_bound(ad, 3);
-    cout << "lower_bound(3): " << *lb << "\n";
-    cout << "upper_bound(3): " << *ub << "\n";
-    cout << "binary_search(3): " << ranges::binary_search(ad, 3) << "\n";
+    cout << "lower_bound(3): " << *lb << " \n";
+    cout << "upper_bound(3): " << *ub << " \n";
+    cout << "binary_search(3): " << ranges::binary_search(ad, 3) << " \n";
 
     // 7. Monotonic Deque — Sliding Window Maximum
     cout << "\n--- 7. Sliding Window Maximum ---\n";

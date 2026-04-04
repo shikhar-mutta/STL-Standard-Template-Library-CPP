@@ -200,13 +200,13 @@ int main()
     cout << "sorted: ";
     for (int x : rd)
         cout << x << " ";
-    cout << "\n";
+    cout << " \n";
     auto filtered = rd | views::filter([](int x)
                                        { return x > 3; });
     cout << "filtered > 3: ";
     for (int x : filtered)
         cout << x << " ";
-    cout << "\n";
+    cout << " \n";
 
     return 0;
 }

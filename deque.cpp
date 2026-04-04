@@ -46,7 +46,6 @@ int main()
     cout << "empty():    " << d1.empty() << " \n";
     d2.resize(7, 99);
     print_deque("after resize(7,99)", d2);
-    
 
     // 3. Access
     cout << "\n--- 3. Access ---\n";

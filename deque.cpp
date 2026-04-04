@@ -20,6 +20,7 @@ void print_deque(const string& label, const deque<T>& d) {
 int main() {
     cout << "========== std::deque [C++20] ==========\n";
 
+    
     // 1. Initialization
     cout << "\n--- 1. Initialization ---\n";
     deque<int> d1;

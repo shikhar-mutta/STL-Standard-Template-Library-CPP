@@ -12,7 +12,6 @@
 
 using namespace std;
 
-
 int main()
 {
     cout << "========== std::queue [C++20] ==========\n";

@@ -124,17 +124,23 @@ int main()
     d.pop_back();
     cout << "after pop_front/back: ";
     for (int x : d)
+    {
         cout << x << " ";
+    }
     cout << " \n";
     d.insert(d.begin() + 1, 99);
     cout << "after insert(1,99): ";
     for (int x : d)
+    {
         cout << x << " ";
+    }
     cout << " \n";
     d.erase(d.begin());
     cout << "after erase(begin): ";
     for (int x : d)
+    {
         cout << x << " ";
+    }
     cout << " \n";
 
     // 5. Monotonic Deque — Sliding Window Maximum

@@ -51,10 +51,10 @@ int main()
     // 3. Access
     cout << "\n--- 3. Access ---\n";
     deque<int> d = {10, 20, 30, 40, 50};
-    cout << "d[2]:   " << d[2] << "\n";
-    cout << "at(2):  " << d.at(2) << "\n";
-    cout << "front:  " << d.front() << "\n";
-    cout << "back:   " << d.back() << "\n";
+    cout << "d[2]:   " << d[2] << " \n";
+    cout << "at(2):  " << d.at(2) << " \n";
+    cout << "front:  " << d.front() << " \n";
+    cout << "back:   " << d.back() << " \n";
 
     // 4. Push/Pop Both Ends — O(1)
     cout << "\n--- 4. Push/Pop Both Ends ---\n";

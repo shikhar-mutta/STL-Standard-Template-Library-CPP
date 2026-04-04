@@ -60,14 +60,14 @@ int main()
     while (!bfs2.empty())
     {
         int sz = bfs2.size();
-        cout << "[";
+        cout << "[ ";
         while (sz--)
         {
             int node = bfs2.front();
             bfs2.pop();
             cout << node;
             if (sz)
-                cout << ",";
+                cout << ", ";
             for (int child : tree[node])
                 if (!visited[child])
                 {
@@ -77,7 +77,7 @@ int main()
         }
         cout << "] ";
     }
-    cout << "\n";
+    cout << " \n";
 
     // 3. BFS — 2D Grid Shortest Path
     cout << "\n--- 3. BFS (2D Grid) ---\n";

@@ -121,7 +121,7 @@ int main()
     {
         cout << x << " ";
     }
-    cout << "\n";
+    cout << " \n";
 
     // 8. Sliding Window Minimum
     cout << "\n--- 8. Sliding Window Minimum ---\n";

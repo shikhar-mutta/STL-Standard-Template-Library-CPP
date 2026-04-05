@@ -176,15 +176,19 @@ int main()
                                      { return x * x; });
     cout << "odd squares: ";
     for (int x : pipeline)
+    {
         cout << x << " ";
-    cout << "\n";
-    cout << "sum: " << reduce(rd.begin(), rd.end(), 0) << "\n";
+    }
+    cout << " \n";
+    cout << "sum: " << reduce(rd.begin(), rd.end(), 0) << " \n";
     vector<int> prefix(rd.size());
     partial_sum(rd.begin(), rd.end(), prefix.begin());
     cout << "prefix sums: ";
     for (int x : prefix)
+    {
         cout << x << " ";
-    cout << "\n";
+    }
+    cout << " \n";
 
     return 0;
 }

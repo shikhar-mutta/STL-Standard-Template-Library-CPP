@@ -123,18 +123,32 @@ int main()
     }
     cout << " \n";
 
-      // 8. Sliding Window Minimum
+    // 8. Sliding Window Minimum
     cout << "\n--- 8. Sliding Window Minimum ---\n";
     deque<int> dq_min;
     vector<int> min_result;
-    for (int i = 0; i < (int)nums.size(); i++) {
-        while (!dq_min.empty() && dq_min.front() < i-k+1) {dq_min.pop_front();}
-        while (!dq_min.empty() && nums[dq_min.back()] > nums[i]) {dq_min.pop_back();}
+    for (int i = 0; i < (int)nums.size(); i++)
+    {
+        while (!dq_min.empty() && dq_min.front() < i - k + 1)
+        {
+            dq_min.pop_front();
+        }
+        while (!dq_min.empty() && nums[dq_min.back()] > nums[i])
+        {
+            dq_min.pop_back();
+        }
         dq_min.push_back(i);
-        if (i >= k-1) {min_result.push_back(nums[dq_min.front()]);}
+        if (i >= k - 1)
+        {
+            min_result.push_back(nums[dq_min.front()]);
+        }
     }
     cout << "window min (k=" << k << ") -> ";
-    for (int x : min_result){ cout << x << " ";} cout << "\n";
+    for (int x : min_result)
+    {
+        cout << x << " ";
+    }
+    cout << "\n";
 
     // 9. Circular Buffer Pattern
     cout << "\n--- 9. Circular Buffer Pattern (capacity=4) ---\n";

@@ -161,7 +161,9 @@ int main()
             circ.pop_front();
         cout << "add " << x << " -> [";
         for (int v : circ)
+        {
             cout << v << " ";
+        }
         cout << "]\n";
     }
 

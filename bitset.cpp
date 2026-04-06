@@ -49,14 +49,14 @@ int main()
     // 3. Bitwise Operations
     cout << "\n--- 3. Bitwise Operations ---\n";
     bitset<8> bx(0b10110101), by(0b01101110);
-    cout << "x:    " << bx.to_string() << "\n";
-    cout << "y:    " << by.to_string() << "\n";
-    cout << "x&y:  " << (bx & by).to_string() << "\n";
-    cout << "x|y:  " << (bx | by).to_string() << "\n";
-    cout << "x^y:  " << (bx ^ by).to_string() << "\n";
-    cout << "~x:   " << (~bx).to_string() << "\n";
-    cout << "x<<2: " << (bx << 2).to_string() << "\n";
-    cout << "x>>2: " << (bx >> 2).to_string() << "\n";
+    cout << "x:    " << bx.to_string() << " \n";
+    cout << "y:    " << by.to_string() << " \n";
+    cout << "x&y:  " << (bx & by).to_string() << " \n";
+    cout << "x|y:  " << (bx | by).to_string() << " \n";
+    cout << "x^y:  " << (bx ^ by).to_string() << " \n";
+    cout << "~x:   " << (~bx).to_string() << " \n";
+    cout << "x<<2: " << (bx << 2).to_string() << " \n";
+    cout << "x>>2: " << (bx >> 2).to_string() << " \n";
 
     // 4. Queries
     cout << "\n--- 4. Queries ---\n";

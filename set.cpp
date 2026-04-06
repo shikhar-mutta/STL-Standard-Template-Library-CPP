@@ -95,13 +95,17 @@ int main()
     cout << "\n--- 6. Iterators ---\n";
     set<int> is = {10, 20, 30, 40};
     cout << "forward: ";
-    for (int x : is)
-        cout << x << " ";
-    cout << "\n";
+    for (auto x = is.begin(); x != is.end(); ++x)
+    {
+        cout << *x << " ";
+    }
+    cout << " \n";
     cout << "reverse: ";
     for (auto rit = is.rbegin(); rit != is.rend(); ++rit)
+    {
         cout << *rit << " ";
-    cout << "\n";
+    }
+    cout << " \n";
 
     // 7. Merge & Swap (C++17)
     cout << "\n--- 7. Merge & Swap ---\n";

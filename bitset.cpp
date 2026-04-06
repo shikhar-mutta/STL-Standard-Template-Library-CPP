@@ -110,15 +110,22 @@ int main()
     int W = 16;
     bitset<17> dp;
     dp[0] = 1;
+    // ***
     for (int w : weights)
+    {
         dp |= (dp << w);
+    }
     cout << "achievable sums 0.." << W << ": ";
     for (int s = 0; s <= W; s++)
+    {
         if (dp[s])
+        {
             cout << s << " ";
-    cout << "\n";
-    cout << "can achieve sum 8:  " << (bool)dp[8] << "\n";
-    cout << "can achieve sum 9:  " << (bool)dp[9] << "\n";
+        }
+    }
+    cout << " \n";
+    cout << "can achieve sum 8:  " << (bool)dp[8] << " \n";
+    cout << "can achieve sum 9:  " << (bool)dp[9] << " \n";
 
     // 8. Bitmask DP — TSP-style
     cout << "\n--- 8. Bitmask DP (TSP-style) ---\n";

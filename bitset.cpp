@@ -61,11 +61,11 @@ int main()
     // 4. Queries
     cout << "\n--- 4. Queries ---\n";
     bitset<8> q(0b10110101);
-    cout << "count():  " << q.count() << "\n";
-    cout << "size():   " << q.size() << "\n";
-    cout << "any():    " << q.any() << "\n";
-    cout << "none():   " << q.none() << "\n";
-    cout << "all():    " << q.all() << "\n";
+    cout << "count():  " << q.count() << " \n";
+    cout << "size():   " << q.size() << " \n";
+    cout << "any():    " << q.any() << " \n";
+    cout << "none():   " << q.none() << " \n";
+    cout << "all():    " << q.all() << " \n";
 
     // 5. Conversions
     cout << "\n--- 5. Conversions ---\n";

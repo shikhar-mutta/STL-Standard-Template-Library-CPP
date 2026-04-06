@@ -24,7 +24,7 @@ int main() {
     set<int> s2 = {5,3,1,4,2,3};  // dups removed, sorted
     set<int,greater<int>> s_desc = {5,3,1,4,2};
     print_set("s2 (sorted, unique)", s2);
-    cout << "s_desc (descending): "; for (int x : s_desc) cout << x << " "; cout << "\n";
+    cout << "s_desc (descending): "; for (int x : s_desc) cout << x << " "; cout << " \n";
     vector<int> v = {5,3,1,4,2,3,5};
     set<int> from_v(v.begin(), v.end());
     print_set("set from vector", from_v);

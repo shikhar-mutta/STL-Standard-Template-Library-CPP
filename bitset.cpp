@@ -163,13 +163,16 @@ int main()
     cout << "\n--- 9. Subset Enumeration ---\n";
     int mask = 0b1011;
     cout << "subsets of " << bitset<4>(mask) << ": ";
+    // ***
     for (int sub = mask; sub > 0; sub = (sub - 1) & mask)
+    {
         cout << bitset<4>(sub) << " ";
+    }
     cout << "0000\n";
     int bits = 0b10110111;
-    cout << "__builtin_popcount(10110111): " << __builtin_popcount(bits) << "\n";
-    cout << "__builtin_ctz (trailing zeros): " << __builtin_ctz(bits) << "\n";
-    cout << "__builtin_clz (leading zeros):  " << __builtin_clz(bits) << "\n";
+    cout << "__builtin_popcount(10110111): " << __builtin_popcount(bits) << " \n";
+    cout << "__builtin_ctz (trailing zeros): " << __builtin_ctz(bits) << " \n";
+    cout << "__builtin_clz (leading zeros):  " << __builtin_clz(bits) << " \n";
 
     // 10. Bitwise CP Tricks
     cout << "\n--- 10. Bitwise CP Tricks ---\n";

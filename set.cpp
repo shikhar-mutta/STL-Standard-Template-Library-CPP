@@ -177,29 +177,34 @@ int main()
     print_set("deduplicated", dedup);
 
     vector<int> check = {1, 2, 3, 4, 5};
+    // ***
     bool all_unique = set<int>(check.begin(), check.end()).size() == check.size();
-    cout << "all unique: " << all_unique << "\n";
+    cout << "all unique: " << all_unique << " \n";
 
     vector<int> arr = {1, 3, 1, 4, 3, 2, 1, 3};
     int window = 3;
+    // ***
     cout << "sliding window min (w=3): ";
     for (int i = 0; i + window <= (int)arr.size(); i++)
     {
         set<int> win(arr.begin() + i, arr.begin() + i + window);
         cout << *win.begin() << " ";
     }
-    cout << "\n";
-
+    cout << " \n";
+    // ***
     auto cmp = [](const string &a, const string &b)
     {
         return a.size() != b.size() ? a.size() < b.size() : a < b;
     };
+    // ***
     set<string, decltype(cmp)> word_set(cmp);
     word_set.insert({"banana", "fig", "strawberry", "kiwi", "apple"});
     cout << "sorted by length: ";
     for (auto &w : word_set)
+    {
         cout << w << " ";
-    cout << "\n";
+    }
+    cout << " \n";
 
     return 0;
 }

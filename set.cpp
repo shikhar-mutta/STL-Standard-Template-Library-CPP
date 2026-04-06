@@ -124,10 +124,13 @@ int main()
                                        { return x % 2 == 0; });
     cout << "evens:      ";
     for (int x : evens)
+    {
         cout << x << " ";
-    cout << "\n";
+    }
+    cout << " \n";
+    // ***
     auto kth = *ranges::next(rng_s.begin(), 3);
-    cout << "4th element: " << kth << "\n";
+    cout << "4th element: " << kth << " \n";
 
     // 10. CP Patterns
     cout << "\n--- 10. CP Patterns ---\n";

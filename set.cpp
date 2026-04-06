@@ -89,7 +89,7 @@ int main()
     es.erase(es.lower_bound(4), es.end());
     print_set("after erase [lb(4),end)", es);
     es.clear();
-    cout << "after clear, size: " << es.size() << "\n";
+    cout << "after clear, size: " << es.size() << " \n";
 
     // 6. Iterators
     cout << "\n--- 6. Iterators ---\n";

@@ -175,21 +175,22 @@ int main()
     cout << "__builtin_clz (leading zeros):  " << __builtin_clz(bits) << " \n";
 
     // 10. Bitwise CP Tricks
+    // ***
     cout << "\n--- 10. Bitwise CP Tricks ---\n";
     int n = 42;
-    cout << "n = " << n << "\n";
-    cout << "Is power of 2: " << ((n & (n - 1)) == 0) << "\n";
-    cout << "Lowest set bit:        " << (n & (-n)) << "\n";
-    cout << "Turn off lowest bit:   " << (n & (n - 1)) << "\n";
-    cout << "XOR trick (n^n=0):     " << (n ^ n) << "\n";
-    cout << "XOR trick (n^0=n):     " << (n ^ 0) << "\n";
-    cout << "Multiply by 2 (<<1):   " << (n << 1) << "\n";
-    cout << "Divide by 2 (>>1):     " << (n >> 1) << "\n";
-    cout << "Set bit k=3:           " << (n | (1 << 3)) << "\n";
-    cout << "Clear bit k=5:         " << (n & ~(1 << 5)) << "\n";
-    cout << "Toggle bit k=1:        " << (n ^ (1 << 1)) << "\n";
-    cout << "Check bit k=3:         " << ((n >> 3) & 1) << "\n";
-    cout << "Parity of " << n << ":  " << (__builtin_parity(n) ? "odd" : "even") << "\n";
+    cout << "n =                    " << n << " \n";
+    cout << "Is power of 2:         " << ((n & (n - 1)) == 0) << " \n";
+    cout << "Lowest set bit:        " << (n & (-n)) << " \n";
+    cout << "Turn off lowest bit:   " << (n & (n - 1)) << " \n";
+    cout << "XOR trick (n^n=0):     " << (n ^ n) << " \n";
+    cout << "XOR trick (n^0=n):     " << (n ^ 0) << " \n";
+    cout << "Multiply by 2 (<<1):   " << (n << 1) << " \n";
+    cout << "Divide by 2 (>>1):     " << (n >> 1) << " \n";
+    cout << "Set bit k=3:           " << (n | (1 << 3)) << " \n";
+    cout << "Clear bit k=5:         " << (n & ~(1 << 5)) << " \n";
+    cout << "Toggle bit k=1:        " << (n ^ (1 << 1)) << " \n";
+    cout << "Check bit k=3:         " << ((n >> 3) & 1) << " \n";
+    cout << "Parity of " << n << ": " << (__builtin_parity(n) ? "odd" : "even") << " \n";
 
     return 0;
 }

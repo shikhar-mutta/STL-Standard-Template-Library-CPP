@@ -132,6 +132,44 @@ int main()
     auto kth = *ranges::next(rng_s.begin(), 3);
     cout << "4th element: " << kth << " \n";
 
+    // 9. Set Operations (C++17)
+    cout << "\n--- 9. Set Operations ---\n";
+    set<int> set1 = {1, 2, 3, 4, 5};
+    set<int> set2 = {3, 4, 5, 6, 7};
+    vector<int> result;
+
+    // Union
+    // ***
+    set_union(set1.begin(), set1.end(), set2.begin(), set2.end(), back_inserter(result));
+    cout << "union:        ";
+    for (int x : result)
+    {
+        cout << x << " ";
+    }
+    cout << " \n";
+
+    // Intersection
+    //   ***
+    result.clear();
+    set_intersection(set1.begin(), set1.end(), set2.begin(), set2.end(), back_inserter(result));
+    cout << "intersection: ";
+    for (int x : result)
+    {
+        cout << x << " ";
+    }
+    cout << " \n";
+
+    // Difference
+    // ***
+    result.clear();
+    set_difference(set1.begin(), set1.end(), set2.begin(), set2.end(), back_inserter(result));
+    cout << "difference:   ";
+    for (int x : result)
+    {
+        cout << x << " ";
+    }
+    cout << " \n";
+
     // 10. CP Patterns
     cout << "\n--- 10. CP Patterns ---\n";
     vector<int> dupes = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};

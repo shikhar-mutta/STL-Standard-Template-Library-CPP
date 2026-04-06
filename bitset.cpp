@@ -31,20 +31,20 @@ int main()
     // 2. Bit Access & Modification
     cout << "\n--- 2. Bit Access ---\n";
     bitset<8> b(0b10110101);
-    cout << "b:          " << b.to_string() << "\n";
-    cout << "b[0] (LSB): " << b[0] << "\n";
-    cout << "b[7] (MSB): " << b[7] << "\n";
-    cout << "b.test(2):  " << b.test(2) << "\n";
+    cout << "b:          " << b.to_string() << " \n";
+    cout << "b[0] (LSB): " << b[0] << " \n";
+    cout << "b[7] (MSB): " << b[7] << " \n";
+    cout << "b.test(2):  " << b.test(2) << " \n";
     b.set(1);
     b.reset(0);
     b.flip(3);
-    cout << "after set(1),reset(0),flip(3): " << b.to_string() << "\n";
+    cout << "after set(1),reset(0),flip(3): " << b.to_string() << " \n";
     b.set();
-    cout << "after set() all:   " << b.to_string() << "\n";
+    cout << "after set() all:   " << b.to_string() << " \n";
     b.reset();
-    cout << "after reset() all: " << b.to_string() << "\n";
+    cout << "after reset() all: " << b.to_string() << " \n";
     b.flip();
-    cout << "after flip() all:  " << b.to_string() << "\n";
+    cout << "after flip() all:  " << b.to_string() << " \n";
 
     // 3. Bitwise Operations
     cout << "\n--- 3. Bitwise Operations ---\n";

@@ -134,18 +134,30 @@ int main()
     vector<vector<int>> adj = {{1, 2}, {0, 2, 3}, {0, 1, 3}, {1, 2}};
     can_reach[1][0] = 1;
     for (int mask = 1; mask < (1 << N); mask++)
+    {
         for (int u = 0; u < N; u++)
         {
             if (!can_reach[mask][u])
+            {
                 continue;
+            }
             for (int v : adj[u])
+            {
                 if (!(mask & (1 << v)))
-                    can_reach[mask | (1 << v)][v] = 1;
+                {
+                    {
+                        can_reach[mask | (1 << v)][v] = 1;
+                    }
+                }
+            }
         }
+    }
     int full = (1 << N) - 1, paths = 0;
     for (int v = 0; v < N; v++)
+    {
         paths += can_reach[full][v];
-    cout << "paths visiting all " << N << " cities: " << paths << "\n";
+    }
+    cout << "paths visiting all " << N << " cities: " << paths << " \n";
 
     // 9. Subset Enumeration
     cout << "\n--- 9. Subset Enumeration ---\n";

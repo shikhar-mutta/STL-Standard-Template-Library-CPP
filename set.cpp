@@ -114,7 +114,6 @@ int main()
     print_set("A after merge", A);
     print_set("B (overlapping stay)", B);
     set<int> X = {1, 2}, Y = {3, 4};
-    
     X.swap(Y);
     print_set("X after swap", X);
 

@@ -62,19 +62,22 @@ int main()
     // 4. Lookup
     cout << "\n--- 4. Lookup ---\n";
     set<int> ls = {1, 3, 5, 7, 9, 11};
-    cout << "contains(5):  " << ls.contains(5) << "\n";
-    cout << "contains(6):  " << ls.contains(6) << "\n";
-    cout << "count(5):     " << ls.count(5) << "\n";
+    cout << "contains(5):       " << ls.contains(5) << "\n";
+    cout << "contains(6):       " << ls.contains(6) << "\n";
+    cout << "count(5):          " << ls.count(5) << "\n";
+    // ***
     if (auto fit = ls.find(7); fit != ls.end())
+    {
         cout << "find(7): found " << *fit << "\n";
+    }
     auto lb = ls.lower_bound(5), ub = ls.upper_bound(5);
-    cout << "lower_bound(5): " << *lb << "\n";
-    cout << "upper_bound(5): " << *ub << "\n";
+    cout << "lower_bound(5):    " << *lb << "\n";
+    cout << "upper_bound(5):    " << *ub << "\n";
     auto [lo, hi] = ls.equal_range(7);
-    cout << "equal_range(7): [" << *lo << ", " << *hi << ")\n";
+    cout << "equal_range(7):    [" << *lo << ", " << *hi << ")\n";
     auto it7 = ls.find(7);
-    cout << "predecessor of 7: " << *prev(it7) << "\n";
-    cout << "successor of 7:   " << *next(it7) << "\n";
+    cout << "predecessor of 7:  " << *prev(it7) << "\n";
+    cout << "successor of 7:    " << *next(it7) << "\n";
 
     // 5. Erase
     cout << "\n--- 5. Erase ---\n";

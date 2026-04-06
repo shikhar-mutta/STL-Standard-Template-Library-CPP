@@ -23,10 +23,10 @@ int main()
     bitset<8> b2(0b10110101); // From integer
     bitset<8> b3("11001010"); // From string (MSB first)
     bitset<8> b4(0xFF);       // 11111111
-    cout << "b1 (zero):      " << b1.to_string() << "\n";
-    cout << "b2 (0b10110101):" << b2.to_string() << "\n";
-    cout << "b3 (string):    " << b3.to_string() << "\n";
-    cout << "b4 (0xFF):      " << b4.to_string() << "\n";
+    cout << "b1 (zero):      " << b1.to_string() << " \n";
+    cout << "b2 (0b10110101):" << b2.to_string() << " \n";
+    cout << "b3 (string):    " << b3.to_string() << " \n";
+    cout << "b4 (0xFF):      " << b4.to_string() << " \n";
 
     // 2. Bit Access & Modification
     cout << "\n--- 2. Bit Access ---\n";

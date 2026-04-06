@@ -70,11 +70,11 @@ int main()
     // 5. Conversions
     cout << "\n--- 5. Conversions ---\n";
     bitset<8> conv(0b10110101);
-    cout << "to_ulong():  " << conv.to_ulong() << "\n";
-    cout << "to_ullong(): " << conv.to_ullong() << "\n";
-    cout << "to_string(): " << conv.to_string() << "\n";
+    cout << "to_ulong():  " << conv.to_ulong() << " \n";
+    cout << "to_ullong(): " << conv.to_ullong() << " \n";
+    cout << "to_string(): " << conv.to_string() << " \n";
     string bit_str = conv.to_string();
-    cout << "lower 4 bits: " << bit_str.substr(4) << "\n";
+    cout << "lower 4 bits: " << bit_str.substr(4) << " \n";
 
     // 6. Sieve of Eratosthenes
     cout << "\n--- 6. Sieve of Eratosthenes ---\n";

@@ -83,14 +83,26 @@ int main()
     is_prime.set();
     is_prime[0] = is_prime[1] = 0;
     for (int p = 2; p * p <= LIMIT; p++)
+    {
         if (is_prime[p])
+        {
             for (int j = p * p; j <= LIMIT; j += p)
+            {
                 is_prime[j] = 0;
+            }
+        }
+    }
     cout << "primes up to " << LIMIT << ": ";
     for (int i = 2; i <= LIMIT; i++)
+    {
         if (is_prime[i])
-            cout << i << " ";
-    cout << "\ncount: " << is_prime.count() << "\n";
+        {
+            {
+                cout << i << " ";
+            }
+        }
+    }
+    cout << "\ncount: " << is_prime.count() << " \n";
 
     // 7. Bitmask DP — Subset Sum
     cout << "\n--- 7. Bitmask DP (Subset Sum) ---\n";

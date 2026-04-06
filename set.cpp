@@ -55,8 +55,8 @@ int main()
     s.insert({20, 30, 40});
     s.emplace(15);
     s.emplace(10);
-    cout << "insert(10) ok:      " << ok1 << " (1=new)\n";
-    cout << "insert(10) dup ok:  " << ok2 << " (0=exists)\n";
+    cout << "insert(10) ok:      " << ok1 << " (1=new) \n";
+    cout << "insert(10) dup ok:  " << ok2 << " (0=exists) \n";
     print_set("set", s);
 
     // 4. Lookup

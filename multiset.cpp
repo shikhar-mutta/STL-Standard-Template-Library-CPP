@@ -96,9 +96,11 @@ int main()
     multiset<int> bag = {5, 1, 9, 2, 8, 3};
     cout << "min: " << *bag.begin() << "\n";
     cout << "max: " << *bag.rbegin() << "\n";
+    // ***
     bag.erase(bag.begin());
     bag.erase(prev(bag.end()));
     print_ms("after removing min/max", bag);
+    // ***
     bag.insert(10);
     cout << "median (approx): " << *next(bag.begin(), bag.size() / 2) << "\n";
 
@@ -107,6 +109,7 @@ int main()
     multiset<int> kth = {3, 1, 4, 1, 5, 9, 2, 6, 5};
     int k = 4;
     auto kit = kth.begin();
+    // ***
     advance(kit, k - 1);
     cout << k << "-th smallest: " << *kit << "\n";
 
@@ -117,8 +120,10 @@ int main()
                                     { return x >= 3; });
     cout << "elements >= 3: ";
     for (int x : freq2)
+    {
         cout << x << " ";
-    cout << "\n";
+    }
+    cout << " \n";
 
     return 0;
 }

@@ -43,7 +43,6 @@ int main()
     s.insert(10);
     s.insert({5, 25, 20});
     s.emplace(15);
-    
     print_ms("after inserts", s);
 
     // 3. Lookup

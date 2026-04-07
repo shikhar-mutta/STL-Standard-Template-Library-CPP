@@ -15,7 +15,9 @@ void print_ms(const string &label, const multiset<int> &ms)
 {
     cout << label << ": ";
     for (int x : ms)
+    {
         cout << x << " ";
+    }
     cout << "\n";
 }
 

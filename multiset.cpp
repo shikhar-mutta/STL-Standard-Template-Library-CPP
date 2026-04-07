@@ -50,20 +50,24 @@ int main()
     // 3. Lookup
     cout << "\n--- 3. Lookup ---\n";
     multiset<int> ls = {1, 3, 3, 5, 5, 5, 7};
-    cout << "count(3):    " << ls.count(3) << "\n";
-    cout << "count(5):    " << ls.count(5) << "\n";
-    cout << "contains(5): " << ls.contains(5) << "\n";
-    cout << "contains(9): " << ls.contains(9) << "\n";
+    cout << "count(3):    " << ls.count(3) << " \n";
+    cout << "count(5):    " << ls.count(5) << " \n";
+    cout << "contains(5): " << ls.contains(5) << " \n";
+    cout << "contains(9): " << ls.contains(9) << " \n";
     if (auto fit = ls.find(5); fit != ls.end())
-        cout << "find(5): found " << *fit << "\n";
+    {
+        cout << "find(5): found " << *fit << " \n";
+    }
     auto lb = ls.lower_bound(3), ub = ls.upper_bound(5);
-    cout << "lower_bound(3): " << *lb << "\n";
-    cout << "upper_bound(5): " << *ub << "\n";
+    cout << "lower_bound(3): " << *lb << " \n";
+    cout << "upper_bound(5): " << *ub << " \n";
     auto [lo, hi] = ls.equal_range(5);
     cout << "equal_range(5): ";
     for (auto it = lo; it != hi; ++it)
+    {
         cout << *it << " ";
-    cout << "(count=" << distance(lo, hi) << ")\n";
+    }
+    cout << "(count=" << distance(lo, hi) << ") \n";
 
     // 4. Erase
     cout << "\n--- 4. Erase ---\n";

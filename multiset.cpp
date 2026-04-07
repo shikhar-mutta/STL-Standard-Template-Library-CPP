@@ -85,9 +85,11 @@ int main()
     // 5. Merge (C++17)
     cout << "\n--- 5. Merge ---\n";
     multiset<int> MA = {1, 2, 2}, MB = {2, 3, 3};
+    // ***
     MA.merge(MB);
     print_ms("A after merge", MA);
-    cout << "B empty: " << MB.empty() << "\n";
+    // ***
+    cout << "B empty: " << MB.empty() << " \n";
 
     // 6. Sorted Bag — Running Min/Max
     cout << "\n--- 6. Sorted Bag (Running Min/Max) ---\n";

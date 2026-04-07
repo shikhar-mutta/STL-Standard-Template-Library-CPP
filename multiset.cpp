@@ -79,7 +79,6 @@ int main()
     es.erase(one);
     print_ms("after erase one 2", es);
     multiset<int> es2 = {1, 2, 2, 2, 3};
-    
     es2.erase(es2.lower_bound(2), es2.upper_bound(2));
     print_ms("after range erase all 2s", es2);
 

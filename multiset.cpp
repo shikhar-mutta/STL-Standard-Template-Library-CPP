@@ -30,9 +30,9 @@ int main()
     print_ms("ms (with dups, sorted)", ms);
     cout << "ms_desc: ";
     for (int x : ms_desc)
-        cout << x << " ";
-    cout << "\n";
-
+{        cout << x << " ";}
+    cout << " \n";
+    
     // 2. Insert
     cout << "\n--- 2. Insert ---\n";
     multiset<int> s;

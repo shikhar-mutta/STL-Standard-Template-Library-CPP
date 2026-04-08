@@ -122,25 +122,36 @@ int main()
                                        { return p.second >= 90; });
     cout << "scores >= 90: ";
     for (auto &[k, v] : high)
+    {
         cout << k << ":" << v << " ";
-    cout << "\n";
+    }
+    cout << " \n";
     vector<string> keys;
     for (auto &[k, v] : scores)
+    {
         keys.push_back(k);
+    }
     cout << "keys: ";
     for (auto &k : keys)
+    {
         cout << k << " ";
-    cout << "\n";
+    }
+    cout << " \n";
     vector<int> vals;
     for (auto &[k, v] : scores)
+    {
         vals.push_back(v);
+    }
     cout << "vals: ";
     for (int v : vals)
+    {
         cout << v << " ";
-    cout << "\n";
+    }
+    cout << " \n";
+    // ***
     auto max_it = ranges::max_element(scores, [](auto &a, auto &b)
                                       { return a.second < b.second; });
-    cout << "top scorer: " << max_it->first << " = " << max_it->second << "\n";
+    cout << "top scorer: " << max_it->first << " = " << max_it->second << " \n";
 
     // 8. CP Patterns
     cout << "\n--- 8. CP Patterns ---\n";

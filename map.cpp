@@ -158,22 +158,28 @@ int main()
     string words[] = {"apple", "banana", "apple", "cherry", "banana", "apple"};
     map<string, int> freq;
     for (auto &w : words)
+    {
         freq[w]++;
-    cout << "word frequencies:\n";
+    }
+    cout << "word frequencies: \n";
     for (auto &[w, c] : freq)
-        cout << "  " << w << ": " << c << "\n";
-
+    {
+        cout << "  " << w << ": " << c << " \n";
+    }
     map<int, int> sdata = {{10, 1}, {20, 2}, {30, 3}, {40, 4}, {50, 5}};
     int L = 20, R = 40;
     cout << "keys in [" << L << "," << R << "]: ";
     for (auto it = sdata.lower_bound(L); it != sdata.upper_bound(R); ++it)
+    {
         cout << it->first << ":" << it->second << " ";
-    cout << "\n";
-
+    }
+    cout << " \n";
     vector<int> data_arr = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};
     map<int, int> cnt;
     for (int x : data_arr)
+    {
         cnt[x]++;
+    }
     cout << "distinct elements: " << cnt.size() << "\n";
     auto max_elem = *ranges::max_element(cnt, [](auto &a, auto &b)
                                          { return a.second < b.second; });

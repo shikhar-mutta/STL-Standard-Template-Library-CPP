@@ -40,14 +40,17 @@ int main()
     m["dog"] = 3;
     m["cat"] = 7;
     m["dog"] = 10;
-    cout << "m[\"bird\"] (creates key!): " << m["bird"] << "\n";
+    cout << "m[\"bird\"] (creates key!): " << m["bird"] << " \n";
+    // ***
     auto [iter, ok] = m.insert({"cat", 99});
-    cout << "insert(cat,99) ok: " << ok << " (0=already exists)\n";
+    cout << "insert(cat,99) ok: " << ok << " (0=already exists) \n";
+    // ***
     m.insert_or_assign("cat", 99);
-    cout << "after insert_or_assign(cat,99): " << m["cat"] << "\n";
+    cout << "after insert_or_assign(cat,99): " << m["cat"] << " \n";
+    // ***
     m.try_emplace("cat", 500);
     m.try_emplace("lion", 500);
-    cout << "cat after try_emplace (unchanged): " << m["cat"] << "\n";
+    cout << "cat after try_emplace (unchanged): " << m["cat"] << " \n";
     print_map("full map", m);
 
     // 3. Lookup

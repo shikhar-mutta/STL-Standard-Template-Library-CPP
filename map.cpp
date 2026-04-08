@@ -57,16 +57,18 @@ int main()
     cout << "\n--- 3. Lookup ---\n";
     map<string, int> lm = {{"a", 1}, {"b", 2}, {"c", 3}, {"e", 5}};
     if (auto fit = lm.find("b"); fit != lm.end())
-        cout << "find(b): " << fit->second << "\n";
-    cout << "contains(a): " << lm.contains("a") << "\n";
-    cout << "contains(z): " << lm.contains("z") << "\n";
-    cout << "count(a):    " << lm.count("a") << "\n";
-    cout << "at(c):       " << lm.at("c") << "\n";
+    {
+        cout << "find(b): " << fit->second << " \n";
+    }
+    cout << "contains(a): " << lm.contains("a") << " \n";
+    cout << "contains(z): " << lm.contains("z") << " \n";
+    cout << "count(a):    " << lm.count("a") << " \n";
+    cout << "at(c):       " << lm.at("c") << " \n";
     auto lb = lm.lower_bound("b"), ub = lm.upper_bound("c");
-    cout << "lower_bound(b): " << lb->first << ":" << lb->second << "\n";
-    cout << "upper_bound(c): " << ub->first << ":" << ub->second << "\n";
+    cout << "lower_bound(b): " << lb->first << ":" << lb->second << " \n";
+    cout << "upper_bound(c): " << ub->first << ":" << ub->second << " \n";
     auto [lo, hi] = lm.equal_range("c");
-    cout << "equal_range(c): key=" << lo->first << "\n";
+    cout << "equal_range(c): key=" << lo->first << " \n";
 
     // 4. Erase
     cout << "\n--- 4. Erase ---\n";

@@ -80,7 +80,7 @@ int main()
     em.erase(em.begin(), em.find("d"));
     print_map("after range erase", em);
     em.clear();
-    cout << "after clear, size: " << em.size() << "\n";
+    cout << "after clear, size: " << em.size() << " \n";
 
     // 5. Iterators
     cout << "\n--- 5. Iterators ---\n";

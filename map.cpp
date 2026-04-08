@@ -107,12 +107,13 @@ int main()
     // 6. Merge & Swap (C++17)
     cout << "\n--- 6. Merge & Swap ---\n";
     map<int, int> MA = {{1, 10}, {2, 20}}, MB = {{2, 99}, {3, 30}};
+    // ***
     MA.merge(MB);
     print_map("A after merge", MA);
     print_map("B after merge (overlapping stays)", MB);
     map<int, int> X = {{1, 1}}, Y = {{2, 2}};
     X.swap(Y);
-    cout << "X after swap, first key: " << X.begin()->first << "\n";
+    cout << "X after swap, first key: " << X.begin()->first << " \n";
 
     // 7. Ranges on map (C++20)
     cout << "\n--- 7. Ranges on map ---\n";

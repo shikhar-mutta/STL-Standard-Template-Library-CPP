@@ -87,12 +87,22 @@ int main()
     map<int, string> im = {{1, "one"}, {2, "two"}, {3, "three"}};
     cout << "forward: ";
     for (auto &[k, v] : im)
+    {
         cout << k << ":" << v << " ";
-    cout << "\n";
+    }
+    cout << " \n";
+    cout << "forward: ";
+    for (auto rit = im.begin(); rit != im.end(); ++rit)
+    {
+        cout << rit->first << ":" << rit->second << " ";
+    }
+    cout << " \n";
     cout << "reverse: ";
     for (auto rit = im.rbegin(); rit != im.rend(); ++rit)
+    {
         cout << rit->first << ":" << rit->second << " ";
-    cout << "\n";
+    }
+    cout << " \n";
 
     // 6. Merge & Swap (C++17)
     cout << "\n--- 6. Merge & Swap ---\n";

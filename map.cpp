@@ -16,7 +16,9 @@ void print_map(const string &label, const map<K, V, Cmp> &m)
 {
     cout << label << ": ";
     for (auto &[k, v] : m)
+    {
         cout << k << ":" << v << " ";
+    }
     cout << "\n";
 }
 

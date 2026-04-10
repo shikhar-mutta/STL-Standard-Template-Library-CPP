@@ -48,18 +48,20 @@ int main()
     }
     cout << " \n";
 
-    // 4. Lookup & equal_range
+      // 4. Lookup & equal_range
     cout << "\n--- 4. Lookup ---\n";
-    cout << "count(1):    " << m.count(1) << "\n";
-    cout << "contains(1): " << m.contains(1) << "\n";
+    cout << "count(1):    " << m.count(1) << " \n";
+    cout << "contains(1): " << m.contains(1) << " \n";
     auto [lo, hi] = m.equal_range(1);
     cout << "all values for key=1: ";
     for (auto it = lo; it != hi; ++it)
+    {
         cout << it->second << " ";
+    }
     cout << "\n";
     auto lb = m.lower_bound(2);
     cout << "lower_bound(2): " << lb->first << ":" << lb->second << "\n";
-
+    
     // 5. Erase
     cout << "\n--- 5. Erase ---\n";
     multimap<int, string> em = {{1, "a"}, {1, "b"}, {2, "c"}, {3, "d"}};

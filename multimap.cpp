@@ -21,7 +21,10 @@ int main()
         {"apple", 5}, {"banana", 2}, {"apple", 8}, {"cherry", 1}, {"banana", 7}};
     cout << "mm (sorted by key, dups allowed): ";
     for (auto &[k, v] : mm)
-        cout << k << ":" << v << " ";
+    {
+        cout << endl
+             << k << ":" << v << " ";
+    }
     cout << "\n";
 
     // 2. Size

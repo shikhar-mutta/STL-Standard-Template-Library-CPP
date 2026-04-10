@@ -22,7 +22,7 @@ int main()
     cout << "mm (sorted by key, dups allowed): ";
     for (auto &[k, v] : mm)
     {
-        cout << endl
+        cout << " \n"
              << k << ":" << v << " ";
     }
     cout << "\n";
@@ -42,8 +42,11 @@ int main()
     m.emplace(3, "three");
     cout << "after inserts: ";
     for (auto &[k, v] : m)
-        cout << k << ":" << v << " ";
-    cout << "\n";
+    {
+        cout << " \n"
+             << k << ":" << v << " ";
+    }
+    cout << " \n";
 
     // 4. Lookup & equal_range
     cout << "\n--- 4. Lookup ---\n";

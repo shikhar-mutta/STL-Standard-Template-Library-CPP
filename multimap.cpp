@@ -99,24 +99,23 @@ int main()
         cout << " \n";
         git = e;
     }
-
     // 7. Ranges (C++20)
     cout << "\n--- 7. Ranges ---\n";
     auto high = m | views::filter([](auto &p)
                                   { return p.first >= 2; });
     cout << "keys >= 2: ";
     for (auto &[k, v] : high)
-        cout << k << ":" << v << " ";
-    cout << "\n";
+        {cout <<"\n"<< k << ":" << v << " ";}
+    cout << " \n";
 
     // Unique keys via set
     vector<int> unique_keys;
     for (auto it = m.begin(); it != m.end(); it = m.upper_bound(it->first))
-        unique_keys.push_back(it->first);
+        {unique_keys.push_back(it->first);}
     cout << "unique keys: ";
     for (int k : unique_keys)
-        cout << k << " ";
-    cout << "\n";
+        {cout << k << " ";}
+    cout << " \n";
 
     return 0;
 }

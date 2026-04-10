@@ -86,14 +86,16 @@ int main()
     cout << "\n--- 6. Group by Key Pattern ---\n";
     multimap<string, string> index = {
         {"cpp", "vector"}, {"cpp", "map"}, {"java", "ArrayList"}, {"cpp", "set"}, {"java", "HashMap"}};
-        auto git = index.begin();
+    auto git = index.begin();
     while (git != index.end())
     {
         string key = git->first;
         cout << "  " << key << ":";
         auto [s, e] = index.equal_range(key);
         for (auto it = s; it != e; ++it)
-            {cout << " " << it->second;}
+        {
+            cout << " " << it->second;
+        }
         cout << " \n";
         git = e;
     }

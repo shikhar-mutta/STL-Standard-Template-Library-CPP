@@ -29,8 +29,8 @@ int main()
 
     // 2. Size
     cout << "\n--- 2. Size ---\n";
-    cout << "size():         " << mm.size() << "\n";
-    cout << "count(apple):   " << mm.count("apple") << "\n";
+    cout << "size():         " << mm.size() << " \n";
+    cout << "count(apple):   " << mm.count("apple") << " \n";
 
     // 3. Insert
     cout << "\n--- 3. Insert ---\n";

@@ -105,16 +105,23 @@ int main()
                                   { return p.first >= 2; });
     cout << "keys >= 2: ";
     for (auto &[k, v] : high)
-        {cout <<"\n"<< k << ":" << v << " ";}
+    {
+        cout << "\n"
+             << k << ":" << v << " ";
+    }
     cout << " \n";
 
     // Unique keys via set
     vector<int> unique_keys;
     for (auto it = m.begin(); it != m.end(); it = m.upper_bound(it->first))
-        {unique_keys.push_back(it->first);}
+    {
+        unique_keys.push_back(it->first);
+    }
     cout << "unique keys: ";
     for (int k : unique_keys)
-        {cout << k << " ";}
+    {
+        cout << k << " ";
+    }
     cout << " \n";
 
     return 0;

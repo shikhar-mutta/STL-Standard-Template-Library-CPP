@@ -62,19 +62,24 @@ int main()
     auto lb = m.lower_bound(2);
     cout << "lower_bound(2): " << lb->first << ":" << lb->second << "\n";
 
-
     // 5. Erase
     cout << "\n--- 5. Erase ---\n";
     multimap<int, string> em = {{1, "a"}, {1, "b"}, {2, "c"}, {3, "d"}};
     em.erase(1);
     cout << "after erase(1) all: ";
     for (auto &[k, v] : em)
-{        cout<<" \n" << k << ":" << v << " ";}
+    {
+        cout << " \n"
+             << k << ":" << v << " ";
+    }
     cout << " \n";
     em.erase(em.find(2));
     cout << "after erase(find(2)): ";
     for (auto &[k, v] : em)
-        {cout <<" \n"<< k << ":" << v << " ";}
+    {
+        cout << " \n"
+             << k << ":" << v << " ";
+    }
     cout << "\n";
 
     // 6. Grouping Pattern

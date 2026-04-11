@@ -39,14 +39,16 @@ int main()
     cout << "\n--- 2. Min-Heap ---\n";
     priority_queue<int, vector<int>, greater<int>> minpq;
     for (int x : {5, 3, 8, 1, 9, 2})
+    {
         minpq.push(x);
+    }
     cout << "pop order (min first): ";
     while (!minpq.empty())
     {
         cout << minpq.top() << " ";
         minpq.pop();
     }
-    cout << "\n";
+    cout << " \n";
 
     // 3. Custom Comparator (pair heap — min by first)
     cout << "\n--- 3. Custom Comparator ---\n";

@@ -63,7 +63,7 @@ int main()
         pair_pq.pop();
         cout << pri << ":" << val << " ";
     }
-    cout << "\n";
+    cout << " \n";
 
     // 4. K Largest / K Smallest
     cout << "\n--- 4. K Largest / K Smallest ---\n";

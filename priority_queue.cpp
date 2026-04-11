@@ -139,7 +139,9 @@ int main()
     vector<vector<int>> arrays = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
     priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, greater<>> merge_pq;
     for (int i = 0; i < (int)arrays.size(); i++)
+    {
         merge_pq.push({arrays[i][0], i, 0});
+    }
     cout << "merged: ";
     while (!merge_pq.empty())
     {
@@ -147,9 +149,11 @@ int main()
         merge_pq.pop();
         cout << val << " ";
         if (ei + 1 < (int)arrays[ai].size())
+        {
             merge_pq.push({arrays[ai][ei + 1], ai, ei + 1});
+        }
     }
-    cout << "\n";
+    cout << " \n";
 
     // 7. Task Scheduler
     cout << "\n--- 7. Task Scheduler ---\n";

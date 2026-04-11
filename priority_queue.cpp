@@ -172,12 +172,18 @@ int main()
             time_units++;
         }
         for (int t : temp)
+        {
             if (t > 0)
+            {
                 task_pq.push(t);
+            }
+        }
         if (!task_pq.empty())
+        {
             time_units += cycle + 1;
+        }
     }
-    cout << "min time to complete tasks: " << time_units << "\n";
+    cout << "min time to complete tasks: " << time_units << " \n";
 
     // 8. Median of Stream (Two Heaps)
     cout << "\n--- 8. Median of Stream ---\n";

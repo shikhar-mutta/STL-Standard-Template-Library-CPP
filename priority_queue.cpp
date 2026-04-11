@@ -69,30 +69,31 @@ int main()
     cout << "\n--- 4. K Largest / K Smallest ---\n";
     vector<int> data = {3, 2, 1, 5, 6, 4};
     int k = 3;
-
     // K largest using min-heap of size k
     priority_queue<int, vector<int>, greater<>> k_large;
     for (int x : data)
     {
         k_large.push(x);
         if ((int)k_large.size() > k)
+        {
             k_large.pop();
+        }
     }
-    cout << "k=" << k << " largest: kth=" << k_large.top() << "\n";
-
+    cout << "k=" << k << " largest: kth=" << k_large.top() << " \n";
     // kth largest via ranges::nth_element (C++20)
     vector<int> d2 = data;
     ranges::nth_element(d2, d2.begin() + k - 1, greater<>{});
-    cout << "kth largest (nth_element): " << d2[k - 1] << "\n";
-
+    cout << "kth largest (nth_element): " << d2[k - 1] << " \n";
     priority_queue<int> k_small;
     for (int x : data)
     {
         k_small.push(x);
         if ((int)k_small.size() > k)
+        {
             k_small.pop();
+        }
     }
-    cout << "k=" << k << " smallest: kth=" << k_small.top() << "\n";
+    cout << "k=" << k << " smallest: kth=" << k_small.top() << " \n";
 
     // 5. Dijkstra's Algorithm
     cout << "\n--- 5. Dijkstra's Algorithm ---\n";

@@ -203,13 +203,15 @@ int main()
     auto getMedian = [&]() -> double
     {
         if (lower.size() == upper.size())
+        {
             return (lower.top() + upper.top()) / 2.0;
+        }
         return upper.top();
     };
     for (int x : {5, 15, 1, 3})
     {
         addNum(x);
-        cout << "after adding " << x << ": median=" << getMedian() << "\n";
+        cout << "after adding " << x << ": median=" << getMedian() << " \n";
     }
 
     // 9. Priority Queue from Ranges (C++20)

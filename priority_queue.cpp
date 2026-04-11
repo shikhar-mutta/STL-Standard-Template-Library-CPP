@@ -219,7 +219,7 @@ int main()
     auto source = views::iota(1, 11) | views::transform([](int x)
                                                         { return x * x; });
     priority_queue<int> from_range(source.begin(), source.end());
-    cout << "max of squares 1..10: " << from_range.top() << "\n";
+    cout << "max of squares 1..10: " << from_range.top() << " \n";
 
     return 0;
 }

@@ -115,18 +115,24 @@ int main()
         auto [d, u] = dijkstra_pq.top();
         dijkstra_pq.pop();
         if (d > dist[u])
+        {
             continue;
+        }
         for (auto [vv, w] : adj[u])
+        {
             if (dist[u] + w < dist[vv])
             {
                 dist[vv] = dist[u] + w;
                 dijkstra_pq.push({dist[vv], vv});
             }
+        }
     }
     cout << "Dijkstra from 0: ";
     for (int i = 0; i < nn; i++)
+    {
         cout << i << ":" << dist[i] << " ";
-    cout << "\n";
+    }
+    cout << " \n";
 
     // 6. Merge K Sorted Arrays
     cout << "\n--- 6. Merge K Sorted Arrays ---\n";

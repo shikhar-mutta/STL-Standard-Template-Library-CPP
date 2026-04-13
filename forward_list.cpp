@@ -16,7 +16,9 @@ void print_fl(const string &label, const forward_list<int> &fl)
 {
     cout << label << ": ";
     for (int x : fl)
+    {
         cout << x << " ";
+    }
     cout << "\n";
 }
 

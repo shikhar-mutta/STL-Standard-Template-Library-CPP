@@ -26,7 +26,7 @@ int main()
 {
     cout << "========== std::forward_list [C++20] ==========\n";
     // Singly link list
-
+    
     // 1. Initialization
     cout << "\n--- 1. Initialization ---\n";
     forward_list<int> fl1;
@@ -79,7 +79,6 @@ int main()
     lal.reverse();
     print_fl("reversed", lal);
     lal.remove(6);
-    
     print_fl("remove(6)", lal);
     lal.remove_if([](int x)
                   { return x < 3; });

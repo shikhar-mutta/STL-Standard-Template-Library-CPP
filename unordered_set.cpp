@@ -57,12 +57,14 @@ int main()
     // 4. Lookup — O(1) average
     cout << "\n--- 4. Lookup ---\n";
     unordered_set<int> ls = {1, 2, 3, 4, 5};
-    cout << "contains(3): " << ls.contains(3) << "\n";
-    cout << "contains(9): " << ls.contains(9) << "\n";
+    cout << "contains(3): " << ls.contains(3) << " \n";
+    cout << "contains(9): " << ls.contains(9) << " \n";
     if (auto fit = ls.find(3); fit != ls.end())
-        cout << "find(3): found " << *fit << "\n";
-    cout << "count(3): " << ls.count(3) << "\n";
-    cout << "bucket for 3: " << ls.bucket(3) << "\n";
+    {
+        cout << "find(3): found " << *fit << " \n";
+    }
+    cout << "count(3): " << ls.count(3) << " \n";
+    cout << "bucket for 3: " << ls.bucket(3) << " \n";
 
     // 5. Erase
     cout << "\n--- 5. Erase ---\n";

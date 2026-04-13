@@ -95,6 +95,7 @@ int main()
     // 6. Merge Sorted Lists
     cout << "\n--- 6. Merge ---\n";
     forward_list<int> mA = {1, 3, 5, 7}, mB = {2, 4, 6, 8};
+    // ***
     mA.merge(mB);
     print_fl("merged sorted", mA);
     cout << "mB empty: " << mB.empty() << " \n";

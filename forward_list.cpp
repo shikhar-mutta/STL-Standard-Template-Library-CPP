@@ -34,7 +34,8 @@ int main()
     forward_list<int> fl4(fl2.begin(), fl2.end());
     print_fl("fl2", fl2);
     print_fl("fl3 (5 zeros)", fl3);
-    cout << "size of fl2 (O(n)): " << ranges::distance(fl2) << "\n";
+    // ***
+    cout << "size of fl2 (O(n)): " << ranges::distance(fl2) << " \n";
 
     // 2. Push/Pop (FRONT only)
     cout << "\n--- 2. Push/Pop Front ---\n";

@@ -132,7 +132,7 @@ int main()
 
     vector<int> dup_arr = {1, 2, 3, 1};
     unordered_set<int> dup_check(dup_arr.begin(), dup_arr.end());
-    cout << "contains duplicate: " << (dup_check.size() != dup_arr.size()) << "\n";
+    cout << "contains duplicate: " << (dup_check.size() != dup_arr.size()) << " \n";
 
     vector<int> seq = {100, 4, 200, 1, 3, 2};
     unordered_set<int> seq_set(seq.begin(), seq.end());
@@ -150,7 +150,7 @@ int main()
             longest = max(longest, streak);
         }
     }
-    cout << "longest consecutive: " << longest << "  (1,2,3,4 -> 4)\n";
+    cout << "longest consecutive: " << longest << "  (1,2,3,4 -> 4) \n";
 
     return 0;
 }

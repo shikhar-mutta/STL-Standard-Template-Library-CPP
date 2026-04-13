@@ -92,7 +92,6 @@ int main()
     vector<int> evens_vec(evens.begin(), evens.end());
     ranges::sort(evens_vec);
     Print_US("evens (sorted)", evens_vec);
-
     vector<int> sorted_vec(rs.begin(), rs.end());
     ranges::sort(sorted_vec);
     Print_US("as sorted vector", sorted_vec);

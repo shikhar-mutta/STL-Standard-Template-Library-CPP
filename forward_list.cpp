@@ -25,7 +25,8 @@ void print_fl(const string &label, const forward_list<int> &fl)
 int main()
 {
     cout << "========== std::forward_list [C++20] ==========\n";
-
+    // Singly link list
+    
     // 1. Initialization
     cout << "\n--- 1. Initialization ---\n";
     forward_list<int> fl1;
@@ -50,22 +51,22 @@ int main()
     // 3. before_begin + insert_after / erase_after
     cout << "\n--- 3. insert_after / erase_after ---\n";
     forward_list<int> il = {1, 2, 4, 5};
-    auto pos = il.before_begin();
-    advance(pos, 2);
-    il.insert_after(pos, 3);
+    auto pos = il.before_begin(); // Iterator to before first element
+    advance(pos, 2);              // Move iterator forward 2 steps (O(n) for forward_list)
+    il.insert_after(pos, 3);      // Insert 3 after the position
     print_fl("after insert_after (3 after 2)", il);
 
-    pos = next(il.before_begin(), 4);
-    il.insert_after(pos, {99, 88});
+    pos = next(il.before_begin(), 4); // Get iterator 4 steps forward (returns new iterator)
+    il.insert_after(pos, {99, 88});   // Insert range {99, 88} after position
     print_fl("after range insert_after", il);
 
     pos = il.before_begin();
-    advance(pos, 4);
-    il.erase_after(pos);
+    advance(pos, 4);     // Move 4 steps forward
+    il.erase_after(pos); // Erase single element after position
     print_fl("after erase_after", il);
 
-    auto first_it = il.begin(), last_it = next(first_it, 3);
-    il.erase_after(first_it, last_it);
+    auto first_it = il.begin(), last_it = next(first_it, 3); // Get two iterators
+    il.erase_after(first_it, last_it);                       // Erase range [first_it, last_it)
     print_fl("after erase_after range", il);
 
     // 4. List Algorithms

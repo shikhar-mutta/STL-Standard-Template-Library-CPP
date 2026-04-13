@@ -26,7 +26,7 @@ int main()
 {
     cout << "========== std::forward_list [C++20] ==========\n";
     // Singly link list
-    
+
     // 1. Initialization
     cout << "\n--- 1. Initialization ---\n";
     forward_list<int> fl1;
@@ -89,7 +89,7 @@ int main()
     forward_list<int> src = {10, 20, 30}, dst = {1, 2, 3};
     dst.splice_after(dst.begin(), src);
     print_fl("dst after splice_after", dst);
-    cout << "src empty: " << src.empty() << "\n";
+    cout << "src empty: " << src.empty() << " \n";
 
     // 6. Merge Sorted Lists
     cout << "\n--- 6. Merge ---\n";

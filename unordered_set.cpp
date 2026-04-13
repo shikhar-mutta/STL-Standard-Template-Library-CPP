@@ -74,7 +74,7 @@ int main()
     e.erase(e.find(4));
     Print_US("after erase(it)", e);
     e.clear();
-    cout << "after clear: size=" << e.size() << "\n";
+    cout << "after clear: size=" << e.size() << " \n";
 
     // 6. Merge (C++17)
     cout << "\n--- 6. Merge ---\n";

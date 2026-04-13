@@ -49,9 +49,9 @@ int main()
     auto [it2, ok2] = s.insert(10);
     s.insert({20, 30, 40});
     s.emplace(50);
-    cout << "insert(10) ok:      " << ok1 << " (new element)\n";
-    cout << "insert(10) dup ok:  " << ok2 << " (already exists)\n";
-    cout << "iterator points to: " << *it1 << "\n";
+    cout << "insert(10) ok:      " << ok1 << " (new element) \n";
+    cout << "insert(10) dup ok:  " << ok2 << " (already exists) \n";
+    cout << "iterator points to: " << *it1 << " \n";
     Print_US("set", s);
 
     // 4. Lookup — O(1) average

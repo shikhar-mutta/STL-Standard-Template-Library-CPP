@@ -87,6 +87,7 @@ int main()
     // 5. Splice After
     cout << "\n--- 5. Splice After ---\n";
     forward_list<int> src = {10, 20, 30}, dst = {1, 2, 3};
+    // ***
     dst.splice_after(dst.begin(), src);
     print_fl("dst after splice_after", dst);
     cout << "src empty: " << src.empty() << " \n";

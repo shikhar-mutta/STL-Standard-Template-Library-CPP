@@ -45,7 +45,7 @@ int main()
     print_fl("after push_front x2", fl);
     fl.pop_front();
     print_fl("after pop_front", fl);
-    cout << "front: " << fl.front() << "\n";
+    cout << "front: " << fl.front() << " \n";
 
     // 3. before_begin + insert_after / erase_after
     cout << "\n--- 3. insert_after / erase_after ---\n";

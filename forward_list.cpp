@@ -131,8 +131,6 @@ int main()
     rev_list.reverse();
     print_fl("reversed list", rev_list);
 
-
-    
     forward_list<int> part = {3, 1, 4, 1, 5, 9, 2, 6};
     forward_list<int> evens_list, odds_list;
     for (int x : part)

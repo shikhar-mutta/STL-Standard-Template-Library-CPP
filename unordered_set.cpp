@@ -37,8 +37,8 @@ int main()
 
     // 2. Hash Stats
     cout << "\n--- 2. Hash Stats ---\n";
-    cout << "bucket_count: " << us2.bucket_count() << "\n";
-    cout << "load_factor:  " << us2.load_factor() << "\n";
+    cout << "bucket_count: " << us2.bucket_count() << " \n";
+    cout << "load_factor:  " << us2.load_factor() << " \n";
     us2.reserve(100);
     us2.rehash(50);
 

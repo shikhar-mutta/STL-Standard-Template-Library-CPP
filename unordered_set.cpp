@@ -11,6 +11,18 @@
 
 using namespace std;
 
+// Template function to print any container efficiently
+template <typename Container>
+void Print_US(const string &label, const Container &cont)
+{
+    cout << label << ": ";
+    for (const auto &elem : cont)
+    {
+        cout << elem << " ";
+    }
+    cout << "\n";
+}
+
 int main()
 {
     cout << "========== std::unordered_set [C++20] ==========\n";
@@ -20,12 +32,7 @@ int main()
     unordered_set<int> us1;
     unordered_set<int> us2 = {5, 3, 1, 4, 2, 3, 5};
     unordered_set<string> words = {"hello", "world", "cpp", "20"};
-    cout << "us2 (unique, unordered): ";
-    for (int x : us2)
-    {
-        cout << x << " ";
-    }
-    cout << " \n";
+    Print_US("us2 (unique, unordered)", us2);
     cout << "size: " << us2.size() << " \n";
 
     // 2. Hash Stats
@@ -45,10 +52,7 @@ int main()
     cout << "insert(10) ok:      " << ok1 << " (new element)\n";
     cout << "insert(10) dup ok:  " << ok2 << " (already exists)\n";
     cout << "iterator points to: " << *it1 << "\n";
-    cout << "set: ";
-    for (int x : s)
-        cout << x << " ";
-    cout << "\n";
+    Print_US("set", s);
 
     // 4. Lookup — O(1) average
     cout << "\n--- 4. Lookup ---\n";
@@ -64,15 +68,9 @@ int main()
     cout << "\n--- 5. Erase ---\n";
     unordered_set<int> e = {1, 2, 3, 4, 5};
     e.erase(3);
-    cout << "after erase(3): ";
-    for (int x : e)
-        cout << x << " ";
-    cout << "\n";
+    Print_US("after erase(3)", e);
     e.erase(e.find(4));
-    cout << "after erase(it): ";
-    for (int x : e)
-        cout << x << " ";
-    cout << "\n";
+    Print_US("after erase(it)", e);
     e.clear();
     cout << "after clear: size=" << e.size() << "\n";
 
@@ -80,14 +78,8 @@ int main()
     cout << "\n--- 6. Merge ---\n";
     unordered_set<int> A = {1, 2, 3}, B = {3, 4, 5};
     A.merge(B);
-    cout << "A after merge: ";
-    for (int x : A)
-        cout << x << " ";
-    cout << "\n";
-    cout << "B (overlap stays): ";
-    for (int x : B)
-        cout << x << " ";
-    cout << "\n";
+    Print_US("A after merge", A);
+    Print_US("B (overlap stays)", B);
 
     // 7. Ranges (C++20)
     cout << "\n--- 7. Ranges ---\n";
@@ -96,17 +88,11 @@ int main()
                                     { return x % 2 == 0; });
     vector<int> evens_vec(evens.begin(), evens.end());
     ranges::sort(evens_vec);
-    cout << "evens (sorted): ";
-    for (int x : evens_vec)
-        cout << x << " ";
-    cout << "\n";
+    Print_US("evens (sorted)", evens_vec);
 
     vector<int> sorted_vec(rs.begin(), rs.end());
     ranges::sort(sorted_vec);
-    cout << "as sorted vector: ";
-    for (int x : sorted_vec)
-        cout << x << " ";
-    cout << "\n";
+    Print_US("as sorted vector", sorted_vec);
 
     // 8. Custom Hash
     cout << "\n--- 8. Custom Hash ---\n";

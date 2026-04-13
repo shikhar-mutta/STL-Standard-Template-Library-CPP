@@ -103,6 +103,7 @@ int main()
     // 7. Ranges (C++20)
     cout << "\n--- 7. Ranges ---\n";
     forward_list<int> rl = {1, 2, 3, 4, 5, 6};
+    // ***
     auto evens = rl | views::filter([](int x)
                                     { return x % 2 == 0; });
     cout << "evens:   ";
@@ -111,6 +112,7 @@ int main()
         cout << x << " ";
     }
     cout << " \n";
+    // ***
     auto doubled = rl | views::transform([](int x)
                                          { return x * 2; });
     cout << "doubled: ";
@@ -119,6 +121,7 @@ int main()
         cout << x << " ";
     }
     cout << " \n";
+    // ***
     int sum = accumulate(rl.begin(), rl.end(), 0, plus<int>());
     cout << "sum (accumulate): " << sum << " \n";
 

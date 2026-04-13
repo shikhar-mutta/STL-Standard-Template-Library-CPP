@@ -89,6 +89,7 @@ int main()
     forward_list<int> src = {10, 20, 30}, dst = {1, 2, 3};
     dst.splice_after(dst.begin(), src);
     print_fl("dst after splice_after", dst);
+    
     cout << "src empty: " << src.empty() << " \n";
 
     // 6. Merge Sorted Lists

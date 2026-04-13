@@ -109,9 +109,9 @@ int main()
     visited.insert({0, 0});
     visited.insert({1, 2});
     visited.insert({3, 3});
-    cout << "visited {0,0}: " << visited.contains({0, 0}) << "\n";
-    cout << "visited {1,1}: " << visited.contains({1, 1}) << "\n";
-    cout << "visited count: " << visited.size() << "\n";
+    cout << "visited {0,0}: " << visited.contains({0, 0}) << " \n";
+    cout << "visited {1,1}: " << visited.contains({1, 1}) << " \n";
+    cout << "visited count: " << visited.size() << " \n";
 
     // 9. CP Patterns
     cout << "\n--- 9. CP Patterns ---\n";

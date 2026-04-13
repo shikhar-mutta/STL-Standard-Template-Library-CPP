@@ -22,9 +22,11 @@ int main()
     unordered_set<string> words = {"hello", "world", "cpp", "20"};
     cout << "us2 (unique, unordered): ";
     for (int x : us2)
+    {
         cout << x << " ";
-    cout << "\n";
-    cout << "size: " << us2.size() << "\n";
+    }
+    cout << " \n";
+    cout << "size: " << us2.size() << " \n";
 
     // 2. Hash Stats
     cout << "\n--- 2. Hash Stats ---\n";

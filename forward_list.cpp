@@ -107,16 +107,20 @@ int main()
                                     { return x % 2 == 0; });
     cout << "evens:   ";
     for (int x : evens)
+    {
         cout << x << " ";
-    cout << "\n";
+    }
+    cout << " \n";
     auto doubled = rl | views::transform([](int x)
                                          { return x * 2; });
     cout << "doubled: ";
     for (int x : doubled)
+    {
         cout << x << " ";
-    cout << "\n";
+    }
+    cout << " \n";
     int sum = accumulate(rl.begin(), rl.end(), 0, plus<int>());
-    cout << "sum (accumulate): " << sum << "\n";
+    cout << "sum (accumulate): " << sum << " \n";
 
     // 8. CP Patterns
     cout << "\n--- 8. CP Patterns ---\n";

@@ -73,15 +73,9 @@ int main()
     cout << "\n--- 5. Erase ---\n";
     unordered_map<string, int> em = {{"a", 1}, {"b", 2}, {"c", 3}, {"d", 4}};
     em.erase("b");
-    cout << "after erase(b): ";
-    for (auto &[k, v] : em)
-        cout << k << ":" << v << " ";
-    cout << "\n";
+    print_um("after erase(b)", em);
     em.erase(em.find("c"));
-    cout << "after erase by iter: ";
-    for (auto &[k, v] : em)
-        cout << k << ":" << v << " ";
-    cout << "\n";
+    print_um("after erase by iter", em);
     em.clear();
     cout << "after clear: size=" << em.size() << "\n";
 
@@ -89,14 +83,8 @@ int main()
     cout << "\n--- 6. Merge ---\n";
     unordered_map<int, int> A = {{1, 10}, {2, 20}}, B = {{2, 99}, {3, 30}};
     A.merge(B);
-    cout << "A after merge: ";
-    for (auto &[k, v] : A)
-        cout << k << ":" << v << " ";
-    cout << "\n";
-    cout << "B (conflicting stays): ";
-    for (auto &[k, v] : B)
-        cout << k << ":" << v << " ";
-    cout << "\n";
+    print_um("A after merge", A);
+    print_um("B (conflicting stays)", B);
 
     // 7. Custom Hash (pair<int,int> keys)
     cout << "\n--- 7. Custom Hash ---\n";

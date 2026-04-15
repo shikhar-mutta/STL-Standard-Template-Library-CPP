@@ -84,6 +84,7 @@ int main()
     unordered_map<int, int> A = {{1, 10}, {2, 20}}, B = {{2, 99}, {3, 30}};
     A.merge(B);
     print_um("A after merge", A);
+    // ***
     print_um("B (conflicting stays)", B);
 
     // 7. Custom Hash (pair<int,int> keys)
@@ -98,18 +99,20 @@ int main()
     unordered_map<pair<int, int>, string, PairHash> grid;
     grid[{0, 0}] = "origin";
     grid[{1, 2}] = "right-down";
-    cout << "grid[{0,0}]: " << grid[{0, 0}] << "\n";
-    cout << "grid[{1,2}]: " << grid[{1, 2}] << "\n";
+    cout << "grid[{0,0}]: " << grid[{0, 0}] << " \n";
+    cout << "grid[{1,2}]: " << grid[{1, 2}] << " \n";
 
     // 8. Ranges (C++20)
     cout << "\n--- 8. Ranges ---\n";
     unordered_map<string, int> scores = {{"alice", 85}, {"bob", 92}, {"carol", 78}};
     auto high = scores | views::filter([](auto &p)
                                        { return p.second >= 90; });
-    cout << "score >= 90: ";
+    cout << "score >= 90: \n";
     for (auto [k, v] : high)
-        cout << k << ":" << v << " ";
-    cout << "\n";
+    {
+        cout << k << ":" << v << " \n";
+    }
+    cout << " \n";
 
     // 10. CP Patterns
     cout << "\n--- 10. CP Patterns ---\n";

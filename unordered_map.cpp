@@ -11,6 +11,17 @@
 
 using namespace std;
 
+template <typename K, typename V>
+void print_um(const string &label, const unordered_map<K, V> &um)
+{
+    cout << label << ": ";
+    for (const auto &[k, v] : um)
+    {
+        cout << k << ":" << v << " ";
+    }
+    cout << "\n";
+}
+
 int main()
 {
     cout << "========== std::unordered_map [C++20] ==========\n";
@@ -19,10 +30,7 @@ int main()
     cout << "\n--- 1. Initialization ---\n";
     unordered_map<string, int> um1;
     unordered_map<string, int> um2 = {{"apple", 5}, {"banana", 2}, {"cherry", 8}};
-    cout << "um2 (unordered): ";
-    for (auto &[k, v] : um2)
-        cout << k << ":" << v << " ";
-    cout << "\n";
+    print_um("um2 (unordered)", um2);
 
     // 2. Size & Hash Stats
     cout << "\n--- 2. Size & Hash Stats ---\n";

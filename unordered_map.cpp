@@ -77,7 +77,7 @@ int main()
     em.erase(em.find("c"));
     print_um("after erase by iter", em);
     em.clear();
-    cout << "after clear: size=" << em.size() << "\n";
+    cout << "after clear: size=" << em.size() << " \n";
 
     // 6. Merge (C++17)
     cout << "\n--- 6. Merge ---\n";

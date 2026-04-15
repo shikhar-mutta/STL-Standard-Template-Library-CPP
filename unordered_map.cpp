@@ -114,20 +114,34 @@ int main()
     }
     cout << " \n";
 
+    // 9. Swap
+    cout << "\n--- 9. Swap ---\n";
+    unordered_map<string, int> left = {{"x", 1}, {"y", 2}};
+    unordered_map<string, int> right = {{"p", 9}, {"q", 10}};
+    cout << "before swap: \n";
+    print_um("left", left);
+    print_um("right", right);
+    left.swap(right);
+    cout << "after swap: \n";
+    print_um("left", left);
+    print_um("right", right);
+
     // 10. CP Patterns
     cout << "\n--- 10. CP Patterns ---\n";
     string ss = "programming";
     unordered_map<char, int> freq;
     for (char c : ss)
+    {
         freq[c]++;
-    cout << "char freq in '" << ss << "': ";
+    }
+    cout << "char freq in '" << ss << "': \n";
     vector<pair<char, int>> fv(freq.begin(), freq.end());
     ranges::sort(fv, [](auto &a, auto &b)
                  { return a.second < b.second; });
     for (auto [c, cnt] : fv)
-        cout << c << ":" << cnt << " ";
-    cout << "\n";
-
+    {
+        cout << c << ":" << cnt << " \n";
+    }
     vector<int> arr = {2, 7, 11, 15};
     int target = 9;
     unordered_map<int, int> seen;
@@ -141,8 +155,7 @@ int main()
         }
         seen[arr[i]] = i;
     }
-    cout << "\n";
-
+    cout << " \n";
     vector<int> nums2 = {1, 1, 1, 2, -1, 3};
     int k = 3, count_sub = 0, prefix = 0;
     unordered_map<int, int> prefix_cnt = {{0, 1}};
@@ -152,7 +165,6 @@ int main()
         count_sub += prefix_cnt[prefix - k];
         prefix_cnt[prefix]++;
     }
-    cout << "subarrays summing to " << k << ": " << count_sub << "\n";
-
+    cout << "subarrays summing to " << k << ": " << count_sub << " \n";
     return 0;
 }

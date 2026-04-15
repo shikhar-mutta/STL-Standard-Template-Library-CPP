@@ -54,10 +54,7 @@ int main()
     um.try_emplace("cat", 500);
     um.try_emplace("lion", 500);
     cout << "cat unchanged: " << um["cat"] << "\n";
-    cout << "full map: ";
-    for (auto &[k, v] : um)
-        cout << k << ":" << v << " ";
-    cout << "\n";
+    print_um("full map", um);
 
     // 4. Lookup — O(1) average
     cout << "\n--- 4. Lookup ---\n";

@@ -24,7 +24,7 @@ void print_um(const string &label, const unordered_map<K, V> &um)
 
 int main()
 {
-    cout << "========== std::unordered_map [C++20] ==========\n";
+    cout << "\n========== std::unordered_map [C++20] ==========\n";
 
     // 1. Initialization
     cout << "\n--- 1. Initialization ---\n";
@@ -34,10 +34,10 @@ int main()
 
     // 2. Size & Hash Stats
     cout << "\n--- 2. Size & Hash Stats ---\n";
-    cout << "size():           " << um2.size() << "\n";
-    cout << "bucket_count():   " << um2.bucket_count() << "\n";
-    cout << "load_factor():    " << um2.load_factor() << "\n";
-    cout << "max_load_factor():" << um2.max_load_factor() << "\n";
+    cout << "size():           " << um2.size() << " \n";
+    cout << "bucket_count():   " << um2.bucket_count() << " \n";
+    cout << "load_factor():    " << um2.load_factor() << " \n";
+    cout << "max_load_factor():" << um2.max_load_factor() << " \n";
     um2.reserve(100);
     um2.rehash(50);
 

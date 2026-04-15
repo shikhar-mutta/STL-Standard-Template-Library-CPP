@@ -14,12 +14,12 @@ using namespace std;
 template <typename K, typename V>
 void print_um(const string &label, const unordered_map<K, V> &um)
 {
-    cout << label << ": ";
+    cout << label << ": \n";
     for (const auto &[k, v] : um)
     {
-        cout << k << ":" << v << " ";
+        cout << k << ":" << v << " " << " \n";
     }
-    cout << "\n";
+    cout << " \n";
 }
 
 int main()

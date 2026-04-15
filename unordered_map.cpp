@@ -59,13 +59,15 @@ int main()
     // 4. Lookup — O(1) average
     cout << "\n--- 4. Lookup ---\n";
     unordered_map<string, int> lm = {{"a", 1}, {"b", 2}, {"c", 3}};
-    cout << "contains(a): " << lm.contains("a") << "\n";
-    cout << "contains(z): " << lm.contains("z") << "\n";
+    cout << "contains(a): " << lm.contains("a") << " \n";
+    cout << "contains(z): " << lm.contains("z") << " \n";
     if (auto fit = lm.find("b"); fit != lm.end())
-        cout << "find(b): " << fit->second << "\n";
-    cout << "count(a): " << lm.count("a") << "\n";
-    cout << "at(c):    " << lm.at("c") << "\n";
-    cout << "bucket for 'a': " << lm.bucket("a") << "\n";
+    {
+        cout << "find(b): " << fit->second << " \n";
+    }
+    cout << "count(a): " << lm.count("a") << " \n";
+    cout << "at(c):    " << lm.at("c") << " \n";
+    cout << "bucket for 'a': " << lm.bucket("a") << " \n";
 
     // 5. Erase
     cout << "\n--- 5. Erase ---\n";

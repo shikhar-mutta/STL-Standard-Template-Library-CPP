@@ -100,11 +100,15 @@ void demo_unordered_multimap()
     auto [lo, hi] = umm.equal_range("apple");
     cout << "apple values: ";
     for (auto it = lo; it != hi; ++it)
+    {
         cout << it->second << " ";
+    }
     cout << " \n";
 
     if (auto fit = umm.find("banana"); fit != umm.end())
-        cout << "find(banana): (one entry) " << fit->second << "\n";
+    {
+        cout << "find(banana): (one entry) " << fit->second << " \n";
+    }
 
     umm.erase("banana");
     cout << "after erase(banana): count(banana)= " << umm.count("banana") << "\n";

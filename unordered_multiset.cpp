@@ -162,7 +162,7 @@ void demo_unordered_multimap()
     cout << "cpp entries: ";
     for (auto &[k, v] : filtered)
         cout << v << " ";
-    cout << "\n";
+    cout << " \n";
 }
 
 int main()

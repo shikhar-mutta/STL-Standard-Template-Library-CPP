@@ -129,17 +129,21 @@ void demo_unordered_multimap()
     index.insert({"java", "HashMap"});
 
     unordered_set<string> printed;
-    cout << "grouped:\n";
+    cout << "grouped: \n";
     for (auto &[lang, _] : index)
     {
         if (printed.contains(lang))
+        {
             continue;
+        }
         printed.insert(lang);
         cout << "  " << lang << ":";
         auto [ss, ee] = index.equal_range(lang);
         for (auto it = ss; it != ee; ++it)
+        {
             cout << " " << it->second;
-        cout << "\n";
+        }
+        cout << " \n";
     }
 
     // Merge

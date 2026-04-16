@@ -76,7 +76,7 @@ void demo_unordered_multiset()
     print_ums("evens (sorted)", evens_vec);
 
     cout << "bucket_count: " << ums.bucket_count()
-         << "  load_factor: " << ums.load_factor() << "\n";
+         << "  load_factor: " << ums.load_factor() << " \n";
 }
 
 void demo_unordered_multimap()

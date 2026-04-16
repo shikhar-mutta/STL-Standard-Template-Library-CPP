@@ -12,15 +12,31 @@
 
 using namespace std;
 
+// ============= Print Helper Functions =============
+template <typename Container>
+void print_ums(const string &label, const Container &c)
+{
+    cout << label << ": ";
+    for (const auto &x : c)
+        cout << x << " ";
+    cout << "\n";
+}
+
+template <typename K, typename V>
+void print_umm(const string &label, const unordered_multimap<K, V> &umm)
+{
+    cout << label << ": ";
+    for (const auto &[k, v] : umm)
+        cout << k << ":" << v << " ";
+    cout << "\n";
+}
+
 void demo_unordered_multiset()
 {
     cout << "========== unordered_multiset ==========\n";
 
     unordered_multiset<int> ums = {3, 1, 4, 1, 5, 9, 2, 6, 5};
-    cout << "ums (with dups, unordered): ";
-    for (int x : ums)
-        cout << x << " ";
-    cout << "\n";
+    print_ums("ums (with dups, unordered)", ums);
     cout << "size: " << ums.size() << "  count(5): " << ums.count(5) << "\n";
 
     ums.insert(10);
@@ -48,24 +64,15 @@ void demo_unordered_multiset()
     // Merge
     unordered_multiset<int> A = {1, 2, 2}, B = {2, 3, 3};
     A.merge(B);
-    cout << "A after merge: ";
-    for (int x : A)
-        cout << x << " ";
-    cout << "\n";
-    cout << "B after merge (empty): ";
-    for (int x : B)
-        cout << x << " ";
-    cout << "\n";
+    print_ums("A after merge", A);
+    print_ums("B after merge (empty)", B);
 
     // Ranges
     auto evens = ums | views::filter([](int x)
                                      { return x % 2 == 0; });
     vector<int> evens_vec(evens.begin(), evens.end());
     ranges::sort(evens_vec);
-    cout << "evens (sorted): ";
-    for (int x : evens_vec)
-        cout << x << " ";
-    cout << "\n";
+    print_ums("evens (sorted)", evens_vec);
 
     cout << "bucket_count: " << ums.bucket_count()
          << "  load_factor: " << ums.load_factor() << "\n";
@@ -83,10 +90,7 @@ void demo_unordered_multimap()
     umm.insert({"banana", 7});
     umm.emplace("date", 3);
 
-    cout << "umm (unordered, dups): ";
-    for (auto &[k, v] : umm)
-        cout << k << ":" << v << " ";
-    cout << "\n";
+    print_umm("umm (unordered, dups)", umm);
 
     cout << "count(apple):    " << umm.count("apple") << "\n";
     cout << "contains(apple): " << umm.contains("apple") << "\n";
@@ -137,14 +141,8 @@ void demo_unordered_multimap()
     Mb.emplace(2, 99);
     Mb.emplace(3, 30);
     Ma.merge(Mb);
-    cout << "Ma after merge: ";
-    for (auto &[k, v] : Ma)
-        cout << k << ":" << v << " ";
-    cout << "\n";
-    cout << "Mb (empty): ";
-    for (auto &[k, v] : Mb)
-        cout << k << ":" << v << " ";
-    cout << "\n";
+    print_umm("Ma after merge", Ma);
+    print_umm("Mb (empty)", Mb);
 
     // Ranges
     auto filtered = index | views::filter([](auto &p)

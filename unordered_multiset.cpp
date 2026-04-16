@@ -65,6 +65,7 @@ void demo_unordered_multiset()
     // Merge
     unordered_multiset<int> A = {1, 2, 2}, B = {2, 3, 3};
     A.merge(B);
+    
     print_ums("A after merge", A);
     print_ums("B after merge (empty)", B);
 

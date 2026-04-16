@@ -111,12 +111,14 @@ void demo_unordered_multimap()
     }
 
     umm.erase("banana");
-    cout << "after erase(banana): count(banana)= " << umm.count("banana") << "\n";
+    cout << "after erase(banana): count(banana)= " << umm.count("banana") << " \n";
 
     auto eit = umm.find("apple");
     if (eit != umm.end())
+    {
         umm.erase(eit);
-    cout << "after erase one apple: count(apple)= " << umm.count("apple") << "\n";
+    }
+    cout << "after erase one apple: count(apple)= " << umm.count("apple") << " \n";
 
     // Grouping pattern
     unordered_multimap<string, string> index;

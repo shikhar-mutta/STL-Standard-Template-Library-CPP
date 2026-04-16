@@ -60,7 +60,7 @@ void demo_unordered_multiset()
     auto oneit = ums.find(5);
     if (oneit != ums.end())
         ums.erase(oneit);
-    cout << "after erase one 5: count(5)= " << ums.count(5) << "\n";
+    cout << "after erase one 5: count(5)= " << ums.count(5) << " \n";
 
     // Merge
     unordered_multiset<int> A = {1, 2, 2}, B = {2, 3, 3};

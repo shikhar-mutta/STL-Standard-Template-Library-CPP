@@ -37,12 +37,12 @@ void demo_unordered_multiset()
 
     unordered_multiset<int> ums = {3, 1, 4, 1, 5, 9, 2, 6, 5};
     print_ums("ums (with dups, unordered)", ums);
-    cout << "size: " << ums.size() << "  count(5): " << ums.count(5) << "\n";
+    cout << "size: " << ums.size() << "  count(5): " << ums.count(5) << " \n";
 
     ums.insert(10);
     ums.insert(10);
     ums.emplace(7);
-    cout << "after inserts, count(10): " << ums.count(10) << "\n";
+    cout << "after inserts, count(10): " << ums.count(10) << " \n";
 
     cout << "contains(5):  " << ums.contains(5) << "\n";
     cout << "contains(99): " << ums.contains(99) << "\n";

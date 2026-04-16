@@ -50,7 +50,9 @@ void demo_unordered_multiset()
     auto er = ums.equal_range(5);
     cout << "equal_range(5): ";
     for (auto it = er.first; it != er.second; ++it)
+    {
         cout << *it << " ";
+    }
     cout << "(count=" << distance(er.first, er.second) << ")\n";
 
     ums.erase(1);

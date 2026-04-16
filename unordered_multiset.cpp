@@ -90,13 +90,12 @@ void demo_unordered_multimap()
     umm.insert({"apple", 8});
     umm.insert({"cherry", 1});
     umm.insert({"banana", 7});
-    
     umm.emplace("date", 3);
 
     print_umm("umm (unordered, dups)", umm);
 
-    cout << "count(apple):    " << umm.count("apple") << "\n";
-    cout << "contains(apple): " << umm.contains("apple") << "\n";
+    cout << "count(apple):    " << umm.count("apple") << " \n";
+    cout << "contains(apple): " << umm.contains("apple") << " \n";
 
     auto [lo, hi] = umm.equal_range("apple");
     cout << "apple values: ";

@@ -44,8 +44,8 @@ void demo_unordered_multiset()
     ums.emplace(7);
     cout << "after inserts, count(10): " << ums.count(10) << " \n";
 
-    cout << "contains(5):  " << ums.contains(5) << "\n";
-    cout << "contains(99): " << ums.contains(99) << "\n";
+    cout << "contains(5):  " << ums.contains(5) << " \n";
+    cout << "contains(99): " << ums.contains(99) << " \n";
 
     auto er = ums.equal_range(5);
     cout << "equal_range(5): ";

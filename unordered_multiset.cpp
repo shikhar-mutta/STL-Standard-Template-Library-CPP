@@ -84,11 +84,13 @@ void demo_unordered_multimap()
     cout << "\n========== unordered_multimap ==========\n";
 
     unordered_multimap<string, int> umm;
+
     umm.insert({"apple", 5});
     umm.insert({"banana", 2});
     umm.insert({"apple", 8});
     umm.insert({"cherry", 1});
     umm.insert({"banana", 7});
+    
     umm.emplace("date", 3);
 
     print_umm("umm (unordered, dups)", umm);

@@ -53,10 +53,9 @@ void demo_unordered_multiset()
     {
         cout << *it << " ";
     }
-    cout << "(count=" << distance(er.first, er.second) << ")\n";
-
+    cout << "(count=" << distance(er.first, er.second) << ") \n";
     ums.erase(1);
-    cout << "after erase(1): count(1)= " << ums.count(1) << "\n";
+    cout << "after erase(1): count(1)= " << ums.count(1) << " \n";
 
     auto oneit = ums.find(5);
     if (oneit != ums.end())

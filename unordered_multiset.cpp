@@ -101,7 +101,7 @@ void demo_unordered_multimap()
     cout << "apple values: ";
     for (auto it = lo; it != hi; ++it)
         cout << it->second << " ";
-    cout << "\n";
+    cout << " \n";
 
     if (auto fit = umm.find("banana"); fit != umm.end())
         cout << "find(banana): (one entry) " << fit->second << "\n";

@@ -257,16 +257,19 @@ int main()
     // Running maximum via inclusive_scan
     vector<int> stream2 = {3, 1, 4, 1, 5, 9, 2, 6};
     vector<int> running_max(stream2.size());
+    // ***
     inclusive_scan(stream2.begin(), stream2.end(), running_max.begin(),
                    [](int a, int b)
                    { return max(a, b); });
     print_vec("running max", running_max);
     // exclusive_scan (C++17)
     vector<int> excl(v.size());
+    // ***
     exclusive_scan(v.begin(), v.end(), excl.begin(), 0);
     print_vec("exclusive_scan of {1..5}", excl);
     // transform_reduce (C++17) — weighted sum
     vector<int> weights2 = {2, 3, 1, 4, 5};
+    // ***
     int weighted = transform_reduce(v.begin(), v.end(), weights2.begin(), 0);
     cout << "weighted dot product {1..5}·{2,3,1,4,5}: " << weighted << " \n";
 

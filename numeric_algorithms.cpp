@@ -39,6 +39,7 @@ int main()
     cout << "sum:     " << sum << " \n";
     int product = accumulate(v.begin(), v.end(), 1, multiplies<int>());
     cout << "product: " << product << " \n";
+    // ***
     string concat = accumulate(v.begin(), v.end(), string(""),
                                [](string acc, int x)
                                { return acc + to_string(x) + " "; });
@@ -47,11 +48,11 @@ int main()
     // 2. reduce (C++17) — Parallelizable accumulate
     cout << "\n--- 2. reduce ---\n";
     int rsum = reduce(v.begin(), v.end());
-    cout << "reduce (sum): " << rsum << "\n";
+    cout << "reduce (sum): " << rsum << " \n";
     int rmax = reduce(v.begin(), v.end(), INT_MIN,
                       [](int a, int b)
                       { return max(a, b); });
-    cout << "reduce (max): " << rmax << "\n";
+    cout << "reduce (max): " << rmax << " \n";
 
     // 3. fold equivalents (C++20 uses accumulate; fold_left is C++23)
     cout << "\n--- 3. accumulate / fold ---\n";

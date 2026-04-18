@@ -228,15 +228,19 @@ int main()
     // 14. Set Operations
     cout << "\n--- 14. Set Operations ---\n";
     vector<int> s1 = {1, 2, 3, 4, 5}, s2 = {3, 4, 5, 6, 7}, out;
+    // ***
     set_union(s1.begin(), s1.end(), s2.begin(), s2.end(), back_inserter(out));
     print_vec("union", out);
     out.clear();
+    // ***
     set_intersection(s1.begin(), s1.end(), s2.begin(), s2.end(), back_inserter(out));
     print_vec("intersection", out);
     out.clear();
+    // ***
     set_difference(s1.begin(), s1.end(), s2.begin(), s2.end(), back_inserter(out));
     print_vec("difference (s1-s2)", out);
     out.clear();
+    // ***
     set_symmetric_difference(s1.begin(), s1.end(), s2.begin(), s2.end(), back_inserter(out));
     print_vec("symmetric difference", out);
 

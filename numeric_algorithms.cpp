@@ -166,13 +166,15 @@ int main()
     print_vec("partial_sort (top 3 sorted)", ps);
     vector<int> ne = {5, 3, 1, 4, 2};
     ranges::nth_element(ne, ne.begin() + 2);
-    cout << "nth_element (median at idx 2): " << ne[2] << "\n";
+    cout << "nth_element (median at idx 2): " << ne[2] << " \n";
     vector<pair<int, char>> sp = {{2, 'a'}, {1, 'b'}, {2, 'c'}, {1, 'd'}};
     stable_sort(sp.begin(), sp.end());
     cout << "stable_sort: ";
     for (auto [n, c] : sp)
+    {
         cout << n << c << " ";
-    cout << "\n";
+    }
+    cout << " \n";
 
     // 11. Binary Search
     cout << "\n--- 11. Binary Search ---\n";

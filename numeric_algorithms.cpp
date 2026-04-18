@@ -22,7 +22,9 @@ void print_vec(const string &label, const vector<T> &v)
 {
     cout << label << ": ";
     for (auto &x : v)
+    {
         cout << x << " ";
+    }
     cout << "\n";
 }
 
@@ -34,13 +36,13 @@ int main()
     cout << "\n--- 1. accumulate ---\n";
     vector<int> v = {1, 2, 3, 4, 5};
     int sum = accumulate(v.begin(), v.end(), 0);
-    cout << "sum:     " << sum << "\n";
+    cout << "sum:     " << sum << " \n";
     int product = accumulate(v.begin(), v.end(), 1, multiplies<int>());
-    cout << "product: " << product << "\n";
+    cout << "product: " << product << " \n";
     string concat = accumulate(v.begin(), v.end(), string(""),
                                [](string acc, int x)
                                { return acc + to_string(x) + " "; });
-    cout << "concat:  " << concat << "\n";
+    cout << "concat:  " << concat << " \n";
 
     // 2. reduce (C++17) — Parallelizable accumulate
     cout << "\n--- 2. reduce ---\n";

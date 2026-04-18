@@ -117,14 +117,16 @@ int main()
     cout << "gcd(0,5):      " << gcd(0, 5) << "  (gcd(0,n)=n)\n";
     // GCD of array using accumulate (fold_left is C++23)
     vector<int> gc_arr = {12, 18, 24, 36};
+    // ***
     int arr_gcd = accumulate(gc_arr.begin(), gc_arr.end(), 0,
                              [](int a, int b)
                              { return gcd(a, b); });
-    cout << "gcd of {12,18,24,36}: " << arr_gcd << "\n";
+    cout << "gcd of {12,18,24,36}: " << arr_gcd << " \n";
+    // ***
     long long arr_lcm = accumulate(gc_arr.begin(), gc_arr.end(), 1LL,
                                    [](long long a, long long b)
                                    { return lcm(a, b); });
-    cout << "lcm of {12,18,24,36}: " << arr_lcm << "\n";
+    cout << "lcm of {12,18,24,36}: " << arr_lcm << " \n";
 
     // 8. <cmath> Functions
     cout << "\n--- 8. <cmath> ---\n";

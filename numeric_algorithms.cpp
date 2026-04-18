@@ -57,15 +57,15 @@ int main()
     // 3. fold equivalents (C++20 uses accumulate; fold_left is C++23)
     cout << "\n--- 3. accumulate / fold ---\n";
     int fl = accumulate(v.begin(), v.end(), 0, plus<int>());
-    cout << "accumulate (sum): " << fl << "\n";
+    cout << "accumulate (sum): " << fl << " \n";
     string fl_str = accumulate(v.begin(), v.end(), string(""),
                                [](string acc, int x)
                                { return acc + to_string(x) + "-"; });
-    cout << "accumulate (concat): " << fl_str << "\n";
+    cout << "accumulate (concat): " << fl_str << " \n";
     int fr = accumulate(v.rbegin(), v.rend(), 0, plus<int>());
-    cout << "reduce from right (sum): " << fr << "\n";
+    cout << "reduce from right (sum): " << fr << " \n";
     auto fl_first = accumulate(next(v.begin()), v.end(), v.front(), plus<int>());
-    cout << "fold_left_first equiv: " << fl_first << "\n";
+    cout << "fold_left_first equiv: " << fl_first << " \n";
 
     // 4. partial_sum — Prefix sums
     cout << "\n--- 4. partial_sum (Prefix Sum) ---\n";

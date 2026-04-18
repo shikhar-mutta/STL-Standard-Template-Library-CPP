@@ -247,13 +247,13 @@ int main()
     // 15. Ranges as Numeric Pipelines (C++20)
     cout << "\n--- 15. Ranges as Numeric Pipelines ---\n";
     // Sum of squares of even numbers in 1..20
+    // ***
     auto even_squares = views::iota(1, 21) | views::filter([](int x)
                                                            { return x % 2 == 0; }) |
                         views::transform([](int x)
                                          { return x * x; });
     int sum_sq_even = reduce(even_squares.begin(), even_squares.end(), 0);
-    cout << "sum of squares of even 1..20: " << sum_sq_even << "\n";
-
+    cout << "sum of squares of even 1..20: " << sum_sq_even << " \n";
     // Running maximum via inclusive_scan
     vector<int> stream2 = {3, 1, 4, 1, 5, 9, 2, 6};
     vector<int> running_max(stream2.size());
@@ -261,16 +261,14 @@ int main()
                    [](int a, int b)
                    { return max(a, b); });
     print_vec("running max", running_max);
-
     // exclusive_scan (C++17)
     vector<int> excl(v.size());
     exclusive_scan(v.begin(), v.end(), excl.begin(), 0);
     print_vec("exclusive_scan of {1..5}", excl);
-
     // transform_reduce (C++17) — weighted sum
     vector<int> weights2 = {2, 3, 1, 4, 5};
     int weighted = transform_reduce(v.begin(), v.end(), weights2.begin(), 0);
-    cout << "weighted dot product {1..5}·{2,3,1,4,5}: " << weighted << "\n";
+    cout << "weighted dot product {1..5}·{2,3,1,4,5}: " << weighted << " \n";
 
     return 0;
 }

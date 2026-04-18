@@ -194,6 +194,7 @@ int main()
     cout << "\n--- 12. Transform / Replace / Remove ---\n";
     vector<int> tv = {1, 2, 3, 4, 5};
     vector<int> sq(tv.size());
+    // map in JS
     ranges::transform(tv, sq.begin(), [](int x)
                       { return x * x; });
     print_vec("transform (square)", sq);
@@ -201,9 +202,11 @@ int main()
                       { return x * 2; });
     print_vec("transform in-place (x2)", tv);
     vector<int> rv2 = {1, 2, 3, 2, 1};
+    // ***
     ranges::replace(rv2, 2, 99);
     print_vec("replace 2 with 99", rv2);
     vector<int> ev = {1, 2, 3, 4, 5, 6};
+    // ***
     auto [new_end, dummy] = ranges::remove_if(ev, [](int x)
                                               { return x % 2 == 0; });
     ev.erase(new_end, ev.end());

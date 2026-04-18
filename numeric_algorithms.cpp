@@ -70,12 +70,13 @@ int main()
     // 4. partial_sum — Prefix sums
     cout << "\n--- 4. partial_sum (Prefix Sum) ---\n";
     vector<int> prefix(v.size());
+    // ***
     partial_sum(v.begin(), v.end(), prefix.begin());
     print_vec("v", v);
     print_vec("prefix", prefix);
     int l = 1, r = 3;
     int range_sum = prefix[r] - (l > 0 ? prefix[l - 1] : 0);
-    cout << "range_sum[" << l << "," << r << "]: " << range_sum << "\n";
+    cout << "range_sum[" << l << "," << r << "]: " << range_sum << " \n";
     // Difference array
     vector<int> diff = {0, 0, 0, 0, 0};
     diff[1] += 3;

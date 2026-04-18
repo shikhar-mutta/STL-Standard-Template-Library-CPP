@@ -150,11 +150,11 @@ int main()
 
     // 9. <climits> Constants
     cout << "\n--- 9. <climits> Constants ---\n";
-    cout << "INT_MAX:   " << INT_MAX << "\n";
-    cout << "INT_MIN:   " << INT_MIN << "\n";
-    cout << "LLONG_MAX: " << LLONG_MAX << "\n";
-    cout << "numeric_limits<int>::max():         " << numeric_limits<int>::max() << "\n";
-    cout << "numeric_limits<double>::epsilon():  " << numeric_limits<double>::epsilon() << "\n";
+    cout << "INT_MAX:   " << INT_MAX << " \n";
+    cout << "INT_MIN:   " << INT_MIN << " \n";
+    cout << "LLONG_MAX: " << LLONG_MAX << " \n";
+    cout << "numeric_limits<int>::max():         " << numeric_limits<int>::max() << " \n";
+    cout << "numeric_limits<double>::epsilon():  " << numeric_limits<double>::epsilon() << " \n";
 
     // 10. sort & variants
     cout << "\n--- 10. Sort Variants ---\n";

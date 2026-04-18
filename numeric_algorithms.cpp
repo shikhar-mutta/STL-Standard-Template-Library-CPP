@@ -184,10 +184,11 @@ int main()
     vector<int> bv = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     auto lo = ranges::lower_bound(bv, 4);
     auto hi2 = ranges::upper_bound(bv, 7);
-    cout << "lower_bound(4):  " << *lo << "\n";
-    cout << "upper_bound(7):  " << *hi2 << "\n";
-    cout << "binary_search(5): " << ranges::binary_search(bv, 5) << "\n";
-    cout << "count in [4,7]:   " << distance(lo, hi2) << "\n";
+    cout << "lower_bound(4):  " << *lo << " \n";
+    cout << "upper_bound(7):  " << *hi2 << " \n";
+    // ***
+    cout << "binary_search(5): " << ranges::binary_search(bv, 5) << " \n";
+    cout << "count in [4,7]:   " << distance(lo, hi2) << " \n";
 
     // 12. Transform, Replace, Remove
     cout << "\n--- 12. Transform / Replace / Remove ---\n";

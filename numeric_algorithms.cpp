@@ -214,15 +214,15 @@ int main()
 
     // 13. min / max / clamp
     cout << "\n--- 13. min / max / clamp ---\n";
-    cout << "min(3,7):           " << min(3, 7) << "\n";
-    cout << "max(3,7):           " << max(3, 7) << "\n";
-    cout << "min({3,1,4,1,5}):   " << min({3, 1, 4, 1, 5}) << "\n";
-    cout << "max({3,1,4,1,5}):   " << max({3, 1, 4, 1, 5}) << "\n";
+    cout << "min(3,7):           " << min(3, 7) << " \n";
+    cout << "max(3,7):           " << max(3, 7) << " \n";
+    cout << "min({3,1,4,1,5}):   " << min({3, 1, 4, 1, 5}) << " \n";
+    cout << "max({3,1,4,1,5}):   " << max({3, 1, 4, 1, 5}) << " \n";
     auto [mn, mx] = ranges::minmax({3, 1, 4, 1, 5});
-    cout << "minmax: min=" << mn << " max=" << mx << "\n";
-    cout << "clamp(5, 1,10):  " << clamp(5, 1, 10) << "\n";
-    cout << "clamp(15,1,10):  " << clamp(15, 1, 10) << "\n";
-    cout << "clamp(-5,1,10):  " << clamp(-5, 1, 10) << "\n";
+    cout << "minmax: min=" << mn << " max=" << mx << " \n";
+    cout << "clamp(5, 1,10):  " << clamp(5, 1, 10) << " \n";
+    cout << "clamp(15,1,10):  " << clamp(15, 1, 10) << " \n";
+    cout << "clamp(-5,1,10):  " << clamp(-5, 1, 10) << " \n";
 
     // 14. Set Operations
     cout << "\n--- 14. Set Operations ---\n";

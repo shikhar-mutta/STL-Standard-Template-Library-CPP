@@ -130,18 +130,21 @@ int main()
 
     // 8. <cmath> Functions
     cout << "\n--- 8. <cmath> ---\n";
+    // ***
     cout << format("sqrt(2):      {:.6f}\n", sqrt(2.0));
-    cout << "pow(2,10):    " << pow(2, 10) << "\n";
-    cout << "abs(-42):     " << abs(-42) << "\n";
-    cout << "ceil(3.2):    " << ceil(3.2) << "\n";
-    cout << "floor(3.8):   " << floor(3.8) << "\n";
-    cout << "round(3.5):   " << round(3.5) << "\n";
+    cout << "pow(2,10):    " << pow(2, 10) << " \n";
+    cout << "abs(-42):     " << abs(-42) << " \n";
+    cout << "ceil(3.2):    " << ceil(3.2) << " \n";
+    cout << "floor(3.8):   " << floor(3.8) << " \n";
+    cout << "round(3.5):   " << round(3.5) << " \n";
+    // ***
     cout << format("log(e):       {:.6f}\n", log(numbers::e));
-    cout << "log2(8):      " << log2(8.0) << "\n";
-    cout << "log10(100):   " << log10(100.0) << "\n";
+    cout << "log2(8):      " << log2(8.0) << " \n";
+    cout << "log10(100):   " << log10(100.0) << " \n";
     cout << format("exp(1):       {:.6f}\n", exp(1.0));
     cout << format("fmod(10.5,3.2): {:.4f}\n", fmod(10.5, 3.2));
-    cout << "hypot(3,4):   " << hypot(3.0, 4.0) << "\n";
+    cout << "hypot(3,4):   " << hypot(3.0, 4.0) << " \n";
+    // ***
     cout << format("pi:           {:.6f}\n", numbers::pi);
     cout << format("e:            {:.6f}\n", numbers::e);
 

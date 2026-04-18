@@ -101,8 +101,10 @@ int main()
     // 6. inner_product — Dot product
     cout << "\n--- 6. inner_product ---\n";
     vector<int> a = {1, 2, 3}, b = {4, 5, 6};
+    // ***
     int dot = inner_product(a.begin(), a.end(), b.begin(), 0);
     cout << "dot product {1,2,3}·{4,5,6}: " << dot << "\n";
+    // ***
     int conv = inner_product(a.begin(), a.end(), b.begin(), 0,
                              plus<int>(), [](int x, int y)
                              { return x * y * 2; });

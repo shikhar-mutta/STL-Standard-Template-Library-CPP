@@ -88,6 +88,7 @@ int main()
     cout << "\n--- 5. iota ---\n";
     vector<int> idx(6);
     iota(idx.begin(), idx.end(), 0);
+    
     print_vec("iota(0..5)", idx);
     // Argsort pattern
     vector<int> arr = {3, 1, 4, 1, 5};
